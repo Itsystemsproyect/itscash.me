@@ -1,6 +1,7 @@
 import React from 'react'
 import { Layout, Menu, Breadcrumb } from 'antd';
 import { SubMenu } from 'rc-menu';
+import itsc from '../assets/img/itscx400.svg'
 
 const { Header, Content, Footer } = Layout;
 
@@ -11,7 +12,10 @@ const Home = () => {
 <>
 <Layout className="layout">
     <Header>
-      <div className="logo" />
+    <div className="nav0">
+      <div className="logo">
+      <img src={itsc} alt="img" width={9} height="auto" />
+      </div>
       <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']}>
        <Menu.Item key="1">Dashboard</Menu.Item>  
        <Menu.Item key="2">Wallet</Menu.Item>
@@ -22,6 +26,7 @@ const Home = () => {
             <Menu.Item key="setting:2">Cerrar Session</Menu.Item>
         </SubMenu>   
       </Menu>
+    </div>
     </Header>
     
     <Content style={{ padding: '0 50px' }}>
