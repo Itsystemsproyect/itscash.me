@@ -25,13 +25,14 @@
  .nav0{
    display: flex;
    justify-content: space-between;
+   flex-wrap: nowrap;
    height: 64px;
  }
  .logoigm{
    top: 0%;
  }
  .ant-menu-dark.ant-menu-horizontal{
-   width: 450px;
+   width: 424px;
  }
 .logo{
    display: flex;

@@ -10,22 +10,22 @@ const Home = () => {
     //console.log(items);
     return (
 <>
-<Layout className="layout">
+
     <Header>
     <div className="nav0">
       <div className="logo">
       <img className="logoimg" src={itsc} alt="img" width={50} height="auto" />
       <pre className="tituitsc"> ITSYSTEMS PROJECT</pre>
       </div>
-      <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']}>
+      <Menu theme="dark" mode="horizontal">
        <Menu.Item key="1">Dashboard</Menu.Item>  
        <Menu.Item key="2">Wallet</Menu.Item>
        <Menu.Item key="3">Store</Menu.Item>
        <Menu.Item key="4">Cuenta</Menu.Item>
-        <SubMenu key="SubMenu"  title="Perfil">
-            <Menu.Item key="setting:1">Configuration</Menu.Item>
-            <Menu.Item key="setting:2">Cerrar Session</Menu.Item>
-        </SubMenu>   
+      <SubMenu key="SubMenu"  title="Perfil">
+          <Menu.Item key="setting:1">Configuration</Menu.Item>
+          <Menu.Item key="setting:2">Cerrar Session</Menu.Item>
+      </SubMenu>   
       </Menu>
     </div>
     </Header>
@@ -51,7 +51,7 @@ const Home = () => {
     <Footer style={{ textAlign: 'center' }}>
         ITSYSTEMS ©2021 Todos Los Derechos Reservados.
     </Footer>
-  </Layout>
+ 
 </>
     )
 }
