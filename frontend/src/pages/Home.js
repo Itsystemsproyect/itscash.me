@@ -14,7 +14,8 @@ const Home = () => {
     <Header>
     <div className="nav0">
       <div className="logo">
-      <img src={itsc} alt="img" width={9} height="auto" />
+      <img className="logoimg" src={itsc} alt="img" width={50} height="auto" />
+      <pre className="tituitsc"> ITSYSTEMS PROJECT</pre>
       </div>
       <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']}>
        <Menu.Item key="1">Dashboard</Menu.Item>  
@@ -29,8 +30,11 @@ const Home = () => {
     </div>
     </Header>
     
-    <Content style={{ padding: '0 50px' }}>
-      
+    <Content className="banner0">
+      <div className="logobanner">
+      <img src={itsc}/>
+      </div>
+    
     </Content>
     <Footer style={{ textAlign: 'center' }}>
         ITSYSTEMS ©2021 Todos Los Derechos Reservados.
