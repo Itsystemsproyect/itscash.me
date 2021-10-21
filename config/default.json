@@ -1,0 +1,10 @@
+{
+    "HOST": "localhost",
+    "USER": "postgres",
+    "PASSWORD": "postgres",
+    "DB":"itsc",
+    "dialect": "postgres",
+    "jwtSecret": "secret",
+    "clusterApiUrl": "devnet"    
+    
+}

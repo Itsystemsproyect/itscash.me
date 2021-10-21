@@ -13,10 +13,12 @@ app.use(json());
 // Importar rutas
 const userRoutes = require("./routes/users");
 const authRoutes = require("./routes/auth");
+const adminRoutes = require("./routes/admin");
 
 // Rutas
 app.use("/api/users", userRoutes);
 app.use("/api/auth", authRoutes);
+app.use("/api/admin", adminRoutes);
 
 // Serve static assets in production
 if (process.env.NODE_ENV === "production") {
