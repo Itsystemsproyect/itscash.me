@@ -1,10 +1,13 @@
 import React from "react";
 import { Form, Input, Button } from "antd";
+import { UserOutlined, LockOutlined } from '@ant-design/icons';
+
 
 const LoginPage = () => {
   return (
     <>
-      <Form
+      <div className="login-page">
+      <Form className="loginform"
         name="basic"
         labelCol={{
           span: 8,
@@ -17,8 +20,8 @@ const LoginPage = () => {
         }}
         autoComplete="off"
       >
-        <Form.Item
-          label="Email"
+        <Form.Item className="emailform"
+          
           name="email"
           rules={[
             {
@@ -27,11 +30,13 @@ const LoginPage = () => {
             },
           ]}
         >
-          <Input />
+          <div className="emailpass">
+          <Input placeholder="Ingrese su Correo" prefix={<UserOutlined />} />
+          </div>
         </Form.Item>
 
-        <Form.Item
-          label="Password"
+        <Form.Item className="emailform"
+          
           name="password"
           rules={[
             {
@@ -40,7 +45,10 @@ const LoginPage = () => {
             },
           ]}
         >
-          <Input.Password />
+          <div className="emailpass">
+          <Input.Password 
+          placeholder='Ingrese su Contraseña' prefix={<LockOutlined/>}/>
+          </div>
         </Form.Item>
         {/* 
         <Form.Item
@@ -65,6 +73,7 @@ const LoginPage = () => {
           </Button>
         </Form.Item>
       </Form>
+      </div>
     </>
   );
 };
