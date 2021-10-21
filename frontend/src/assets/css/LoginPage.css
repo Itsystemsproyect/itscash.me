@@ -6,7 +6,7 @@ body {
 .login-page{
     width: 100%;
     max-width: 400px;
-    margin: 12% auto;
+    margin: 1% auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
