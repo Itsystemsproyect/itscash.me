@@ -6,7 +6,7 @@ import itsc from '../assets/img/itscx400.svg'
 const { Header, Content, Footer } = Layout;
 
 const Home = () => {
-    const items=['Dashboard', 'Wallet','Store', 'Cuenta', 'Perfil']
+    
     //console.log(items);
     return (
 <>
