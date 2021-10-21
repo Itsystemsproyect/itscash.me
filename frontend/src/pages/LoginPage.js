@@ -1,12 +1,18 @@
 import React from "react";
-import { Form, Input, Button } from "antd";
+import { Form, Input, Button, Image } from "antd";
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
-
+import itsc from "../assets/img/usuario.png";
 
 const LoginPage = () => {
   return (
     <>
       <div className="login-page">
+      <div className="loginimg">
+        <img 
+        width={160} src={itsc}
+        />
+      </div>
+
       <Form className="loginform"
         name="basic"
         labelCol={{
@@ -31,7 +37,7 @@ const LoginPage = () => {
           ]}
         >
           <div className="emailpass">
-          <Input placeholder="Ingrese su Correo" prefix={<UserOutlined />} />
+          <Input className="inputmail" placeholder="Ingrese su Correo" prefix={<UserOutlined />} />
           </div>
         </Form.Item>
 
@@ -46,32 +52,16 @@ const LoginPage = () => {
           ]}
         >
           <div className="emailpass">
-          <Input.Password 
+          <Input.Password className="inputpassword"
           placeholder='Ingrese su Contraseña' prefix={<LockOutlined/>}/>
           </div>
         </Form.Item>
-        {/* 
-        <Form.Item
-          name="remember"
-          valuePropName="checked"
-          wrapperCol={{
-            offset: 8,
-            span: 16,
-          }}
-        >
-          <Checkbox>Remember me</Checkbox>
-        </Form.Item>
-          */}
-        <Form.Item
-          wrapperCol={{
-            offset: 8,
-            span: 16,
-          }}
-        >
-          <Button type="primary" htmlType="submit">
-            Enviar
-          </Button>
-        </Form.Item>
+        <div className="btnlogin">
+        <Button ghost key="boton">
+          Login
+        </Button>    
+        </div>
+       
       </Form>
       </div>
     </>
