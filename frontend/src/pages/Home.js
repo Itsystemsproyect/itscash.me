@@ -1,5 +1,5 @@
 import React from 'react'
-import { Layout, Menu, Breadcrumb } from 'antd';
+import { Layout, Menu, Breadcrumb, Button } from 'antd';
 import { SubMenu } from 'rc-menu';
 import itsc from '../assets/img/itscx400.svg'
 
@@ -29,13 +29,25 @@ const Home = () => {
       </Menu>
     </div>
     </Header>
-    
+        
     <Content className="banner0">
       <div className="logobanner">
-      <img src={itsc}/>
+        <div className="imglogo">
+          <img src={itsc}/>
+        </div>
+        <a className="tituloits"> PROYECTO DE RECOMPENSAS ITSYSTEMS</a>
+        <div className="botones">
+        <Button className="btn1" ghost key="boton1">
+          Login
+        </Button>
+        <Button className="btn1" ghost key="boton1">
+          Recompensas
+        </Button>
       </div>
-    
+      </div> 
+        
     </Content>
+
     <Footer style={{ textAlign: 'center' }}>
         ITSYSTEMS ©2021 Todos Los Derechos Reservados.
     </Footer>
