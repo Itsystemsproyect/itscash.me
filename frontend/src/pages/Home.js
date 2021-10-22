@@ -4,6 +4,8 @@ import { Layout, Button } from "antd";
 import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import itsc from "../assets/img/itscx400.svg";
+import Particulas from "../components/particulas/Particulas";
+import '../assets/css/Particulas.css'
 
 const { Content, Footer } = Layout;
 
@@ -12,8 +14,10 @@ const Home = () => {
     <>
       <Layout className="layout">
         <Navbar />
-
         <Content className="banner0">
+              <div id='parti'  style={{ position: 'absolute'}}>
+              <Particulas height="100vh" width="100%"/>
+              </div> 
           <div className="logobanner">
             <div className="imglogo">
               <img src={itsc} alt="logo"/>
@@ -31,7 +35,6 @@ const Home = () => {
             </div>
           </div>
         </Content>
-
         <Footer style={{ textAlign: "center" }}>
           ITSYSTEMS ©2021 Todos Los Derechos Reservados.
         </Footer>

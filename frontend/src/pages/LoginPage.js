@@ -2,6 +2,7 @@ import React, { useState, useContext, useEffect } from "react";
 import AuthContext from "../context/auth/authContext";
 import AlertContext from "../context/alert/alertContext";
 import { Link } from "react-router-dom";
+import Particulas from "../components/particulas/Particulas"
 
 //import { UserOutlined, LockOutlined } from '@ant-design/icons';
 import itsc from "../assets/img/itscx400.svg";
@@ -49,7 +50,11 @@ const LoginPage = (props) => {
 
   return (
     <>
+      <div id='parti'  style={{ position: 'absolute'}}>
+      <Particulas height="100vh" width="100%"/>
+      </div> 
       <div className="login-page">
+        
         <div className="loginimg">
             <Link to='/'>
               <img 
