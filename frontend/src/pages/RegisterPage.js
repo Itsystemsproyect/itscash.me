@@ -4,12 +4,18 @@ import AuthContext from "../context/auth/authContext";
 import { Link } from "react-router-dom";
 import itsc from "../assets/img/itscx400.svg";
 
+
+
+
 const RegisterPage = (props) => {
+
+ 
+  
   const alertContext = useContext(AlertContext);
   const authContext = useContext(AuthContext);
 
   const { setAlert } = alertContext;
-  const { register, error, clearErrors, isAuthenticated } = authContext;
+  const { error, clearErrors, isAuthenticated } = authContext;
 
   useEffect(() => {
     if (isAuthenticated) {
@@ -31,26 +37,43 @@ const RegisterPage = (props) => {
   const { username, email, password } = user;
 
   const onChange = (e) => setUser({ ...user, [e.target.name]: e.target.value });
-
+  
   const onSubmit = (e) => {
+    console.log('Entró evento onSubmit')
     e.preventDefault();
     if (username === "" || email === "" || password === "") {
       setAlert("Por favor ingresa todos los campos", "danger");
+      console.log('Los campos están vacíos')
     } else {
-      register({
+      console.log('los campos son correctos')
+      authContext.register({
         username,
         email,
         password,
       });
     }
   };
+  
+
+  
 
   return (
-    <>
-      <form onSubmit={onSubmit}>
-        <div className="form-group">
-          <label htmlFor="username">Name</label>
+    <>    
+      <div className="login-page">
+        <div className="loginimg">
+            <Link to='/'>
+              <img 
+              width={160} src={itsc} alt="logo"
+              />
+            </Link>
+        </div>
+       
+      <form onSubmit={onSubmit} className="loginform">
+        <div className="form-group emailform">
+          
           <input
+            placeholder="Ingrese su usuario"
+            className="inputmail"
             id="username"
             type="text"
             name="username"
@@ -59,9 +82,11 @@ const RegisterPage = (props) => {
             required
           />
         </div>
-        <div className="form-group">
-          <label htmlFor="email">Email Address</label>
+        <div className="form-group emailform">
+          
           <input
+          placeholder="Ingrese su email"
+            className="inputmail"
             id="email"
             type="email"
             name="email"
@@ -70,9 +95,11 @@ const RegisterPage = (props) => {
             required
           />
         </div>
-        <div className="form-group">
-          <label htmlFor="password">Password</label>
+        <div className="form-group emailform">
+          
           <input
+            placeholder="Ingrese su contraseña"
+            className="inputpassword"
             id="password"
             type="password"
             name="password"
@@ -82,13 +109,17 @@ const RegisterPage = (props) => {
             minLength="7"
           />
         </div>
+        <div className="btnlogin">
 
         <input
           type="submit"
           value="Register"
-          className="btn btn-primary btn-block"
+          
         />
+        </div>
       </form>
+      </div>
+      
     </>
   );
 };
