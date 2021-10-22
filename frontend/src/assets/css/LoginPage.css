@@ -5,7 +5,7 @@ body {
 
 .login-page{
     width: 100%;
-    max-width: 400px;
+    max-width: 350px;
     margin: 10% auto;
     display: flex;
     flex-direction: column;
@@ -18,27 +18,29 @@ body {
     flex-direction: column;
     justify-content: center;
     width:100%;
-    border: 3px #b2d7fa solid;
+    border: 5px #b2d7fa solid;
     border-radius: 9px;
     padding-top: 11px;
 }
-.emailform {
-    
-    width:80%;    
+.emailform {   
+    display: flex;
+    justify-content: center; 
+    width:100%;    
     margin: 10px auto; 
 }
-.emailpass{
-    width:100%;
+.inputlogin{
+    display: block;
+    width:80%;
+    border-radius: 9px;  
 }
 
-.ant-col-16{
-    max-width:100%;
-    
+.inputl{
+  background: transparent;
+  width:100%;
 }
 
 .btnlogin {
-    justify-content: center;
-    display: flex;
+    border-radius: 9px;    
     margin-bottom: 20px;
     margin-top: 10px;
     
@@ -46,12 +48,13 @@ body {
 }
 
 .loginimg{
+  z-index: 1;
     margin: 10px;
 }
 
-.ant-btn-background-ghost {
-    background: #0a5d61 !important;
-  background: linear-gradient(0deg, rgba(0,172,238,1) 0%, rgba(2,126,251,1) 100%);
+.btnlogin {
+    background: #0a5d61 ;
+    background: linear-gradient(0deg, rgba(0,172,238,1) 0%, rgba(2,126,251,1) 100%);
     width: 100px;
     height: 40px;
     line-height: 42px;
@@ -59,17 +62,18 @@ body {
     font-weight: bold;
     border: none;
     font-size:20px;
+    z-index: 1;
         
     
   }
-  .ant-btn-background-ghost span {
+  .btnlogin span {
     position: relative;
     display: block;
     width: 100%;
     height: 100%;
   }
-  .ant-btn-background-ghost:before,
-  .ant-btn-background-ghost:after {
+  .btnlogin:before,
+  .btnlogin:after {
     position: absolute;
     content: "";
     right: 0;
@@ -77,40 +81,40 @@ body {
      background: rgba(2,126,251,1);
     transition: all 0.3s ease;
   }
-  .ant-btn-background-ghost:before {
+  .btnlogin:before {
     height: 0% !important;
     width: 2px !important;
   }
-  .ant-btn-background-ghost:after {
+  .btnlogin:after {
     width: 0% !important;
     height: 2px !important;
   }
-  .ant-btn-background-ghost:hover{
+  .btnlogin:hover{
      background: #ffffff !important;
     box-shadow: none !important;
   }
-  .ant-btn-background-ghost:hover:before {
+  .btnlogin:hover:before {
     height: 100%;
   }
-  .ant-btn-background-ghost:hover:after {
+  .btnlogin:hover:after {
     width: 100%;
   }
-  .ant-btn-background-ghost span:hover{
+  .btnlogin span:hover{
      color: #001529;
   }
  
-  .ant-btn-background-ghost span:before {
+  .btnlogin span:before {
     width: 2px;
     height: 0%;
   }
-  .ant-btn-background-ghost span:after {
+  .btnlogin span:after {
     width: 0%;
     height: 2px;
   }
-  .ant-btn-background-ghost span:hover:before {
+  .btnlogin span:hover:before {
     height: 100%;
   }
-  .ant-btn-background-ghost span:hover:after {
+  .btnlogin span:hover:after {
     width: 100%;
   }
 

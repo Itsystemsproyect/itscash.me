@@ -3,6 +3,7 @@ import AlertContext from "../context/alert/alertContext";
 import AuthContext from "../context/auth/authContext";
 import { Link } from "react-router-dom";
 import itsc from "../assets/img/itscx400.svg";
+import Particulas from "../components/particulas/Particulas";
 
 
 
@@ -57,7 +58,10 @@ const RegisterPage = (props) => {
   
 
   return (
-    <>    
+    <>   
+      <div id='parti'  style={{ position: 'absolute'}}>
+      <Particulas height="100vh" width="100%"/>
+      </div> 
       <div className="login-page">
         <div className="loginimg">
             <Link to='/'>
@@ -72,7 +76,7 @@ const RegisterPage = (props) => {
           
           <input
             placeholder="Ingrese su usuario"
-            className="inputmail"
+            className="inputmail inputlogin"
             id="username"
             type="text"
             name="username"
@@ -85,7 +89,7 @@ const RegisterPage = (props) => {
           
           <input
           placeholder="Ingrese su email"
-            className="inputmail"
+            className="inputmail inputlogin"
             id="email"
             type="email"
             name="email"
@@ -98,7 +102,7 @@ const RegisterPage = (props) => {
           
           <input
             placeholder="Ingrese su contraseña"
-            className="inputpassword"
+            className="inputpassword inputlogin"
             id="password"
             type="password"
             name="password"
@@ -108,9 +112,10 @@ const RegisterPage = (props) => {
             minLength="7"
           />
         </div>
-        <div className="btnlogin">
+        <div className="btnlogin emailform">
 
         <input
+          className="inputlogin inputl"
           type="submit"
           value="Register"
           

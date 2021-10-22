@@ -69,7 +69,7 @@ const LoginPage = (props) => {
           
           <input
           placeholder="Ingrese su email"
-            className="inputmail"
+            className="inputmail inputlogin"
             id="email"
             type="email"
             name="email"
@@ -82,7 +82,7 @@ const LoginPage = (props) => {
           
           <input
             placeholder="Ingrese su contraseña"
-            className="inputpassword"
+            className="inputpassword inputlogin"
             id="password"
             type="password"
             name="password"
@@ -92,9 +92,10 @@ const LoginPage = (props) => {
             minLength="7"
           />
         </div>
-        <div className="btnlogin">
+        <div className="btnlogin emailform">
 
         <input
+          className="inputlogin inputl"
           type="submit"
           value="Login"
           
