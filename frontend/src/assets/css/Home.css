@@ -80,10 +80,10 @@
 .imglogo{
   width: 260px;
   height: 260px;
-  transition: 2.5s ease;
- 	-moz-transition: 2.5s ease; /* Firefox */
- 	-webkit-transition: 2.5s ease; /* Chrome - Safari */
- 	-o-transition: 2.5s ease; /* Opera */  
+  transition: 1.5s ease;
+ 	-moz-transition: 1.5s ease; /* Firefox */
+ 	-webkit-transition: 1.5s ease; /* Chrome - Safari */
+ 	-o-transition: 1.5s ease; /* Opera */  
 }
 
 .tituloits{

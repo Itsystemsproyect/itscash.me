@@ -33,6 +33,7 @@ body {
 
 .ant-col-16{
     max-width:100%;
+    
 }
 
 .btnlogin {
@@ -40,11 +41,80 @@ body {
     display: flex;
     margin-bottom: 20px;
     margin-top: 10px;
+    
+   
 }
+
 .loginimg{
     margin: 10px;
 }
 
+.ant-btn-background-ghost {
+    background: #0a5d61 !important;
+  background: linear-gradient(0deg, rgba(0,172,238,1) 0%, rgba(2,126,251,1) 100%);
+    width: 100px;
+    height: 40px;
+    line-height: 42px;
+    padding: 0;
+    font-weight: bold;
+    border: none;
+    font-size:20px;
+        
+    
+  }
+  .ant-btn-background-ghost span {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .ant-btn-background-ghost:before,
+  .ant-btn-background-ghost:after {
+    position: absolute;
+    content: "";
+    right: 0;
+    top: 0;
+     background: rgba(2,126,251,1);
+    transition: all 0.3s ease;
+  }
+  .ant-btn-background-ghost:before {
+    height: 0% !important;
+    width: 2px !important;
+  }
+  .ant-btn-background-ghost:after {
+    width: 0% !important;
+    height: 2px !important;
+  }
+  .ant-btn-background-ghost:hover{
+     background: #ffffff !important;
+    box-shadow: none !important;
+  }
+  .ant-btn-background-ghost:hover:before {
+    height: 100%;
+  }
+  .ant-btn-background-ghost:hover:after {
+    width: 100%;
+  }
+  .ant-btn-background-ghost span:hover{
+     color: #001529;
+  }
+ 
+  .ant-btn-background-ghost span:before {
+    width: 2px;
+    height: 0%;
+  }
+  .ant-btn-background-ghost span:after {
+    width: 0%;
+    height: 2px;
+  }
+  .ant-btn-background-ghost span:hover:before {
+    height: 100%;
+  }
+  .ant-btn-background-ghost span:hover:after {
+    width: 100%;
+  }
+
+  
 
 
   
