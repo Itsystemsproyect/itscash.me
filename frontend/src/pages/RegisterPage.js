@@ -23,7 +23,7 @@ const RegisterPage = (props) => {
       props.history.push("/profile");
     }
     if (error === "El usuario ya existe") {
-      setAlert(error, "danger");
+      setAlert(error, "error");
       clearErrors();
     }
     // eslint-disable-next-line
@@ -43,7 +43,7 @@ const RegisterPage = (props) => {
     
     e.preventDefault();
     if (username === "" || email === "" || password === "") {
-      setAlert("Por favor ingresa todos los campos", "danger");
+      setAlert("Por favor ingresa todos los campos", "error");
       
     } else {      
       authContext.register({
