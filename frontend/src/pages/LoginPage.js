@@ -3,7 +3,7 @@ import AuthContext from "../context/auth/authContext";
 import AlertContext from "../context/alert/alertContext";
 import { Link } from "react-router-dom";
 
-import { UserOutlined, LockOutlined } from '@ant-design/icons';
+//import { UserOutlined, LockOutlined } from '@ant-design/icons';
 import itsc from "../assets/img/itscx400.svg";
 import "../assets/css/LoginPage.css"
 
@@ -16,10 +16,10 @@ const LoginPage = (props) => {
 
   useEffect(() => {
     if (isAuthenticated) {
-      props.history.push('/');
+      props.history.push('/profile');
     }
 
-    if (error === 'Invalid Credentials') {
+    if (error === 'Credenciales inválidas') {
       setAlert(error, 'danger');
       clearErrors();
     }
@@ -38,7 +38,7 @@ const LoginPage = (props) => {
   const onSubmit = e => {
     e.preventDefault();
     if (email === '' || password === '') {
-      setAlert('Please fill in all fields', 'danger');
+      setAlert('Por favor completar todos los campos', 'danger');
     } else {
       login({
         email,
@@ -91,7 +91,7 @@ const LoginPage = (props) => {
 
         <input
           type="submit"
-          value="Register"
+          value="Login"
           
         />
         </div>

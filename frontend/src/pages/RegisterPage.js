@@ -19,9 +19,9 @@ const RegisterPage = (props) => {
 
   useEffect(() => {
     if (isAuthenticated) {
-      props.history.push("/");
+      props.history.push("/profile");
     }
-    if (error === "User already exists") {
+    if (error === "El usuario ya existe") {
       setAlert(error, "danger");
       clearErrors();
     }
@@ -39,13 +39,12 @@ const RegisterPage = (props) => {
   const onChange = (e) => setUser({ ...user, [e.target.name]: e.target.value });
   
   const onSubmit = (e) => {
-    console.log('Entró evento onSubmit')
+    
     e.preventDefault();
     if (username === "" || email === "" || password === "") {
       setAlert("Por favor ingresa todos los campos", "danger");
-      console.log('Los campos están vacíos')
-    } else {
-      console.log('los campos son correctos')
+      
+    } else {      
       authContext.register({
         username,
         email,
