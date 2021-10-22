@@ -21,7 +21,7 @@ const LoginPage = (props) => {
     }
 
     if (error === 'Credenciales inválidas') {
-      setAlert(error, 'danger');
+      setAlert(error, 'error');
       clearErrors();
     }
     // eslint-disable-next-line
@@ -39,7 +39,7 @@ const LoginPage = (props) => {
   const onSubmit = e => {
     e.preventDefault();
     if (email === '' || password === '') {
-      setAlert('Por favor completar todos los campos', 'danger');
+      setAlert('Por favor completar todos los campos', 'error');
     } else {
       login({
         email,
