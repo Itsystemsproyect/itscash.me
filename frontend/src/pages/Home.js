@@ -16,9 +16,9 @@ const Home = () => {
         <Content className="banner0">
           <div className="logobanner">
             <div className="imglogo">
-              <img src={itsc} />
+              <img src={itsc} alt="logo"/>
             </div>
-            <a className="tituloits"> PROYECTO DE RECOMPENSAS ITSYSTEMS</a>
+            <p className="tituloits">PROYECTO DE RECOMPENSAS ITSYSTEMS</p>
             <div className="botones">
               <Link to="/login">
                 <Button className="btn1" ghost key="boton1">

@@ -1,5 +1,5 @@
 import React from "react";
-import { Form, Input, Button, Image } from "antd";
+import { Form, Input, Button } from "antd";
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
 import itsc from "../assets/img/usuario.png";
 
@@ -9,7 +9,7 @@ const LoginPage = () => {
       <div className="login-page">
       <div className="loginimg">
         <img 
-        width={160} src={itsc}
+        width={160} src={itsc} alt="logo"
         />
       </div>
 
