@@ -117,7 +117,7 @@ const RegisterPage = (props) => {
         <input
           className="inputlogin inputl"
           type="submit"
-          value="Register"
+          value="Regístrate"
           
         />
         </div>

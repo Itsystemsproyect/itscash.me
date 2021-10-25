@@ -14,10 +14,11 @@ const Usuario = require("../models/users");
 
 router.get("/", auth, async (req, res) => {
   try {
-    const { email } = req.body;
+    const id  = req.user.id;
+    
     const user = await Usuario.findOne({
       where: {
-        email: email,
+        id: id,
       },
       attributes: {
         exclude: ["password"],
@@ -25,6 +26,7 @@ router.get("/", auth, async (req, res) => {
     });
     return res.json(user);
   } catch (error) {
+    
     console.error(error);
     res.status(500).send("Server Error");
   }
@@ -47,15 +49,16 @@ router.post(
     }
 
     const { email, password } = req.body;
-
+    
     try {
       let user = await Usuario.findOne({
         where: {
           email: email,
         },
       });
+      
 
-      if (!user) {
+      if (!user) {        
         return res.status(400).json({ msg: "Credenciales inválidas" });
       }
 
@@ -75,7 +78,12 @@ router.post(
         config.get("jwtSecret"),
 
         (err, token) => {
-          if (err) throw err;
+          if (err) {
+            
+            throw err;
+          }
+
+          
           return res.json({ token });
         }
       );
