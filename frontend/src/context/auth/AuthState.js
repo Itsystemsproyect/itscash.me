@@ -51,7 +51,7 @@ const AuthState = (props) => {
 
     try {
       const res = await axios.post("/api/users", formData, config);
-      console.log("conectando al endpoint para registrar usuario");
+      
 
       dispatch({
         type: REGISTER_SUCCESS,
@@ -93,7 +93,7 @@ const AuthState = (props) => {
   };
 
   // Logout
-  const logout = () => dispatch({ type: LOGOUT });
+  //const logout = () => dispatch({ type: LOGOUT });
 
   // Clear Errors
   const clearErrors = () => dispatch({ type: CLEAR_ERRORS });
@@ -108,7 +108,7 @@ const AuthState = (props) => {
         loadUser,
         register,
         login,
-        logout,
+        //logout,
         clearErrors,
       }}
     >

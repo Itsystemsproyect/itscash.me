@@ -47,6 +47,8 @@ router.post(
         password: password,
       });
 
+      
+
       const payload = {
         user: {
           id: newUser.id,
@@ -58,7 +60,8 @@ router.post(
         config.get("jwtSecret"),
 
         (err, token) => {
-          if (err) throw err;
+          if (err) throw err;          
+          
           return res.json({ token });
         }
       );
