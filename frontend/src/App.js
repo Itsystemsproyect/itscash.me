@@ -8,6 +8,7 @@ import PrivateRoute from "./components/routing/PrivateRoute";
 import ProfilePage from "./pages/ProfilePage"; 
 import AlertComponent from "./components/AlertComponent";
 import "./assets/css/Home.css";
+import Dashboard from "./views/Dashboard.js";
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
           <Route exact path="/login" component={LoginPage} />
           <Route exact path="/register" component={RegisterPage} />
           <PrivateRoute exact path="/register" component={ProfilePage} />
+          <Route exact path="/Dashboard" component={Dashboard} />
         </Router>
       </AlertState>
     </AuthState>
