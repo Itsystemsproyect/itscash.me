@@ -1,5 +1,5 @@
 import React from "react";
-import { Layout, Button } from "antd";
+import { Layout, Button, Space } from "antd";
 
 import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
@@ -35,9 +35,12 @@ const Home = () => {
             </div>
           </div>
         </Content>
+        <Content >         
+        </Content>
         <Footer style={{ textAlign: "center" }}>
           ITSYSTEMS ©2021 Todos Los Derechos Reservados.
         </Footer>
+
       </Layout>
     </>
   );

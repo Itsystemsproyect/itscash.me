@@ -17,7 +17,7 @@ const LoginPage = (props) => {
 
   useEffect(() => {
     if (isAuthenticated) {
-      props.history.push('/profile');
+      props.history.push('/Dashboard');
     }
 
     if (error === 'Credenciales inválidas') {

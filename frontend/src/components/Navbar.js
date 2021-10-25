@@ -23,7 +23,7 @@ const Navbar = () => {
           </div>
           <Menu theme="dark" mode="horizontal" defaultSelectedKeys={["2"]}>
             <Menu.Item key="1">
-            <Link to="/Dashboard">Home</Link>
+            Home
             </Menu.Item>
             <Menu.Item key="2">Wallet</Menu.Item>
             <Menu.Item key="3">Store</Menu.Item>
