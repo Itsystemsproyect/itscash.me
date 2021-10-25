@@ -35,7 +35,21 @@ const Home = () => {
             </div>
           </div>
         </Content>
-        <Content >         
+        <div className="transactionstatic">
+        </div>
+        <Content className="content2"> 
+          <div className="descripcion">ACERCA DE </div>
+          <div className="contenedor2">
+            <div className="mision">
+              MISION
+            </div>
+            <div className="vision">
+              VISION
+            </div>
+            <div className="objetivos">
+              OBJETIVOS
+            </div>
+          </div>
         </Content>
         <Footer style={{ textAlign: "center" }}>
           ITSYSTEMS ©2021 Todos Los Derechos Reservados.
