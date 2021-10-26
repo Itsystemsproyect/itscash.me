@@ -19,7 +19,7 @@ const AuthState = (props) => {
   const initialState = {
     token: localStorage.getItem("token"),
     isAuthenticated: null,
-    loading: true,
+    loading: false,
     user: null,
     error: null,
   };
@@ -93,7 +93,7 @@ const AuthState = (props) => {
   };
 
   // Logout
-  //const logout = () => dispatch({ type: LOGOUT });
+  const logout = () => dispatch({ type: LOGOUT });
 
   // Clear Errors
   const clearErrors = () => dispatch({ type: CLEAR_ERRORS });

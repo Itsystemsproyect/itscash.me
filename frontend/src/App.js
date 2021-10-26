@@ -7,6 +7,7 @@ import AlertState from "./context/alert/AlertState";
 import PrivateRoute from "./components/routing/PrivateRoute";
 import ProfilePage from "./pages/ProfilePage"; 
 import AlertComponent from "./components/AlertComponent";
+import App2 from './wallet/App';
 import "./assets/css/Home.css";
 import Dashboard from "./views/Dashboard.js";
 
@@ -21,7 +22,8 @@ function App() {
           <Route exact path="/login" component={LoginPage} />
           <Route exact path="/register" component={RegisterPage} />
           <PrivateRoute exact path="/register" component={ProfilePage} />
-          <Route exact path="/Dashboard" component={Dashboard} />
+          <PrivateRoute exact path="/Dashboard" component={Dashboard} />
+          <PrivateRoute exact path='/wallet' component={App2} />
         </Router>
       </AlertState>
     </AuthState>
