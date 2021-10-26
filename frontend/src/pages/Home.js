@@ -1,5 +1,5 @@
 import React from "react";
-import { Layout, Button, Space } from "antd";
+import { Layout, Button } from "antd";
 
 import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
