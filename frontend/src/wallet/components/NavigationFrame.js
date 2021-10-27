@@ -356,7 +356,7 @@ function WalletSelector() {
         onClose={() => setDeleteMnemonicOpen(false)}
       />
       <Hidden xsDown>
-        <Link to='/Dashboard'>
+        <Link to='/profile'>
       <Button
           color="inherit"
           onClick={(e) => setAnchorEl(e.target)}
