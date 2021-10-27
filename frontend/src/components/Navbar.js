@@ -3,10 +3,21 @@ import { Layout, Menu } from "antd";
 import { SubMenu } from "rc-menu";
 import { Link } from "react-router-dom";
 import itsc from "../assets/img/itscx400.svg";
+import AuthContext from "../context/auth/authContext";
+
+
+
 
 const { Header } = Layout;
 
 const Navbar = () => {
+
+  const authContext = useContext(AuthContext);
+
+  const { isAuthenticated, logout, user } = authContext;
+
+  
+  
   return (
     <>
       <Header>
