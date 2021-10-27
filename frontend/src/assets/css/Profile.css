@@ -1,0 +1,24 @@
+.banner1 {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background: #1a242e;
+  border-color: #666;
+}
+
+.profileContainer {
+  width: 80%;
+  margin: auto;
+  margin-top: 3rem;
+}
+
+.avatarContainer {
+  width: 150px;
+  margin: auto;
+}
+
+.detallesUsuario {
+  margin-top: 3rem;
+  background-color: rgb(241, 234, 234);
+  padding: 1rem;
+}

@@ -21,7 +21,7 @@ function App() {
           <Route exact path="/" component={Home} />
           <Route exact path="/login" component={LoginPage} />
           <Route exact path="/register" component={RegisterPage} />
-          <PrivateRoute exact path="/register" component={ProfilePage} />
+          <PrivateRoute exact path="/profile" component={ProfilePage} />
           <PrivateRoute exact path="/Dashboard" component={Dashboard} />
           <PrivateRoute exact path='/wallet' component={App2} />
         </Router>
