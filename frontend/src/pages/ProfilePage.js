@@ -1,4 +1,4 @@
-import React, {useContext} from 'react'
+import React, {useContext, useEffect} from 'react'
 import Navbar from '../components/Navbar'
 import { Layout, Button, Descriptions } from "antd";
 import '../assets/css/Profile.css'
@@ -8,13 +8,21 @@ import {Link} from 'react-router-dom';
 
 
 
+
 const { Content, Footer } = Layout;
 
 
 
 const ProfilePage = () => {
     const authContext = useContext(AuthContext);
-    const { user } = authContext;
+    const { user, loadUser } = authContext;
+
+    useEffect(() => {
+        loadUser();
+        // eslint-disable-next-line
+    }, [])
+
+    
 
     const userHasImage = (<>
         <Avatar size="150" facebook-id="invalidfacebookusername" src={user && user.imagen} />

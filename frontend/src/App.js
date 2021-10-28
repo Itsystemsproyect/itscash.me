@@ -10,7 +10,7 @@ import EditProfile from "./pages/EditProfile";
 import AlertComponent from "./components/AlertComponent";
 import App2 from './wallet/App';
 import "./assets/css/Home.css";
-import Dashboard from "./views/Dashboard.js";
+
 
 
 function App() {
@@ -22,8 +22,7 @@ function App() {
           <Route exact path="/" component={Home} />
           <Route exact path="/login" component={LoginPage} />
           <Route exact path="/register" component={RegisterPage} />
-          <PrivateRoute exact path="/profile" component={ProfilePage} />
-          <PrivateRoute exact path="/Dashboard" component={Dashboard} />
+          <PrivateRoute exact path="/profile" component={ProfilePage} />        
           <PrivateRoute exact path='/edit_profile' component={EditProfile} />
           <PrivateRoute exact path='/wallet' component={App2} />
           
