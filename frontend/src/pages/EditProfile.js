@@ -71,7 +71,7 @@ const EditProfile = (props) => {
           </div>
           <div className="form-group emailform">
             <input
-              placeholder="Ingrese su email"
+              placeholder="Ingrese su teléfono"
               className="inputmail inputlogin"
               id="telefono"
               type="telefono"
