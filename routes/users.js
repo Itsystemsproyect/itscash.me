@@ -2,6 +2,7 @@ const Router = require("express");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const config = require("config");
+const auth = require("../middleware/auth");
 const { body, validationResult } = require("express-validator");
 const Usuario = require("../models/users");
 
@@ -72,4 +73,53 @@ router.post(
   }
 );
 
+
+// @route       PUT api/user
+// @desc        Update a user
+// @access      Private
+
+router.put('/:id', auth, async (req, res) => {
+  const {username, telefono, empresa, instagram_link, facebook_link, twitter_link, wallet_address} = req.body;
+  
+  // Construir un objeto de usuario
+  const userFields = {};
+  if (username) userFields.username = username;
+  if (telefono) userFields.telefono = telefono;
+  if (empresa) userFields.empresa = empresa;
+  if (instagram_link) userFields.instagram_link = instagram_link;
+  if (facebook_link) userFields.facebook_link = facebook_link;
+  if (twitter_link) userFields.twitter_link = twitter_link;
+  if (wallet_address) userFields.wallet_address = wallet_address;
+
+  
+
+  try {
+    let user = await Usuario.findOne({
+      where: {
+        id: req.params.id,
+      },
+    });
+    
+    if (!user) return res.status(404).json({ msg: 'Usuario no encontrado' });
+
+
+    // Asegurar que un usuario no pueda editar otros usuarios
+    if (user.id.toString() !== req.params.id.toString()) {
+      return res.status(401).json({ msg: 'No autorizado' });      
+    }
+
+    user = await Usuario.update(userFields, { where: { id: req.params.id } })
+    return res.status(200).json({msg: 'Usuario actualizado exitosamente'})
+
+    
+  } catch (error) {
+    console.error(err.message);
+    res.status(500).send('Server Error');
+  }
+
+})
+
+
+
 module.exports = router;
+
