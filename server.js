@@ -1,23 +1,34 @@
 const express = require("express");
-const bodyParser = require("body-parser");
-const cors = require("cors");
+//const bodyParser = require("body-parser");
+//const cors = require("cors");
 const json = require("express");
 const morgan = require("morgan");
 
+/*
 var corsOptions = {
   origin: "http://localhost:3000"
 };
+*/
 
 // Inicialización
 const app = express();
 
-app.use(cors(corsOptions));
+//app.use(cors(corsOptions));
+
+/*
 
 // parse requests of content-type - application/json
 app.use(bodyParser.json());
 
 // parse requests of content-type - application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }));
+
+*/
+
+
+// Init Middleware
+
+app.use(express.json({ extended: false }));
 
 // Importar rutas
 const userRoutes = require("./routes/users");
@@ -32,10 +43,10 @@ app.use("/api/admin", adminRoutes);
 // Serve static assets in production
 if (process.env.NODE_ENV === "production") {
   // Set static folder
-  app.use(express.static("client/build"));
+  app.use(express.static("frontend/build"));
 
   app.get("*", (req, res) =>
-    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"))
+    res.sendFile(path.resolve(__dirname, "frontend", "build", "index.html"))
   );
 }
 
