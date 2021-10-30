@@ -1,7 +1,4 @@
 @import '~antd/dist/antd.css';
-body {
-    background: #001529 !important;
-  }
 
 .login-page{
     width: 100%;

@@ -14,12 +14,12 @@ const { Content, Footer } = Layout;
 
 const Home = () => {
   return (
-    <>
-      <Layout className="layout">
+   
+     <Layout className="layout">
         <Navbar />
         <Content className="banner0">
           <div id="parti" style={{ position: "absolute" }}>
-            <Particulas height="100vh" width="100%" />
+           <Particulas height="100vh" width="100%" />
           </div>
           <div className="logobanner">
             <div className="imglogo">
@@ -71,7 +71,7 @@ const Home = () => {
           ITSYSTEMS ©2021 Todos Los Derechos Reservados.
         </Footer>
       </Layout>
-    </>
+    
   );
 };
 

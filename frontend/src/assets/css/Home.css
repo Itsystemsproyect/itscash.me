@@ -1,5 +1,15 @@
 @import '~antd/dist/antd.css';
-
+* {
+  max-width: 100% !important;
+}
+html{
+  height: 100% !important;
+  
+}
+body {
+  min-height: 100% !important;
+  background: #001529 !important;
+  }
 
 /* CSS Navbar*/
 .site-layout-content {
@@ -58,6 +68,7 @@
   
   
 }
+
 .logobanner{
   
   display: flex;
@@ -203,3 +214,37 @@ img.misimg {
 }
 
 
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="nav0"] {
+    width: 100%;
+  }
+  body{
+    width: 100% !important;
+    background-color: #fff
+  }
+  
+  .layout{
+    width: 100%;
+  }
+  .ant-layout-header{
+    height: 50px;
+  }
+  .nav0{
+    height: 100%;
+  }
+  .logo{
+    display: flex;
+    flex-direction: column;
+    margin-left: -45px;
+    width: 40px;
+    height:auto;
+  }
+  .logoimg{
+    width: 40px;
+    height: auto;
+  }
+  .tituitsc{
+    display: none;
+  }
+}
