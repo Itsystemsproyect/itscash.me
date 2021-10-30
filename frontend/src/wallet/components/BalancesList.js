@@ -655,13 +655,13 @@ function BalanceListItemDetails({
           </Typography>
           {market && (
             <Typography variant="body2">
-              <Link
+            {/*   <Link
                 href={`https://dex.projectserum.com/#/market/${market}`}
                 target="_blank"
                 rel="noopener"
               >
                 View on Serum
-              </Link>
+              </Link> */}
             </Typography>
           )}
           {swapInfo && swapInfo.coin.erc20Contract && (
