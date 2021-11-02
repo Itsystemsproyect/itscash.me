@@ -14,7 +14,7 @@ const { Content, Footer } = Layout;
 
 const Home = () => {
   return (
-   
+   <>
      <Layout className="layout">
         <Navbar />
         <Content className="banner0">
@@ -45,7 +45,7 @@ const Home = () => {
           <div className="descripcion">ACERCA DE </div>
           <div className="contenedor2">
             <div className="mision info">
-              <img className="misimg" src={imgmision} />
+              <img className="misimg" src={imgmision} alt="" />
               <p className="parrasc">
                 Recompensar por el esfuerzo que realizan los trabajadores para
                 sacar adelante una Empresa, cumpliendo con los objetivos y metas
@@ -58,20 +58,20 @@ const Home = () => {
               <p className="parrasc">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sollicitudin vitae lorem quis ultricies. Quisque nec imperdiet ex. Ut pulvinar eu mi quis efficitur.
               </p>
-              <img className="misimg" src={imgvision} />
+              <img className="misimg" src={imgvision} alt=""/>
             </div>
             <div className="objetivos info">
-              <img className="misimg" src={imgobjetivos} />
+              <img className="misimg" src={imgobjetivos} alt="" />
               <p className="parrasc"></p>
               VALORES
             </div>
           </div>
         </Content>
-        <Footer style={{ textAlign: "center" }}>
+        <Footer className="footerhome" style={{ textAlign: "center" }}>
           ITSYSTEMS ©2021 Todos Los Derechos Reservados.
         </Footer>
       </Layout>
-    
+    </>
   );
 };
 

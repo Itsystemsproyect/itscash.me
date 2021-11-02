@@ -9,7 +9,7 @@ import {Link} from 'react-router-dom';
 
 
 
-const { Content, Footer } = Layout;
+const { Content } = Layout;
 
 
 
@@ -55,7 +55,7 @@ const ProfilePage = () => {
                         </Descriptions>
 
                         <div className='buttonContainer'>
-                            <Link to='/edit_profile'><Button type='primary' >Editar Perfil</Button></Link>
+                            <Link to='/edit_profile'><Button className="btnprofile" type='primary' >Editar Perfil</Button></Link>
                         </div>
 
                         

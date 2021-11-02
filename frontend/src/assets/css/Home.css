@@ -8,7 +8,7 @@ html{
 }
 body {
   min-height: 100% !important;
-  background: #001529 !important;
+  background: #192123 !important;
   }
 
 /* CSS Navbar*/
@@ -44,6 +44,12 @@ body {
  .ant-menu-dark.ant-menu-horizontal{
    width: 424px;
  }
+ .ant-menu.ant-menu-dark .ant-menu-item-selected, .ant-menu-submenu-popup.ant-menu-dark .ant-menu-item-selected {
+  background-color: #558f87;
+}
+.ant-menu-dark.ant-menu-horizontal > .ant-menu-item:hover {
+  background-color: #558f87;
+}
 .logo{
    display: flex;
  }
@@ -109,6 +115,7 @@ body {
   
 }
 .botones{
+  
   margin-top:10px;
   width: 300px;
   display: flex;
@@ -123,6 +130,7 @@ body {
     border: none !important;
     transition: all 0.3s ease !important;
     overflow: hidden !important;
+    
     
 }
 .btn1:after{
@@ -163,9 +171,8 @@ body {
 /* Conten 1*/
 
 .content2{
-  background: rgb(0, 0, 0);
-  
-  height: 800px;
+  background: rgb(0, 0, 0);  
+  height: auto !important;
 }
 .descripcion{
   color: white;
@@ -175,7 +182,7 @@ body {
 }
 .contenedor2{  
   font-size:30px;
-  height:400px;
+  height:auto !important;
   color:white;
   display:flex;
   flex-direction: row;
@@ -211,6 +218,11 @@ p.parrasc {
 img.misimg {
   width: 200px;
   
+}
+.footerhome{
+  position: relative;
+  width: 100%;
+ 
 }
 
 

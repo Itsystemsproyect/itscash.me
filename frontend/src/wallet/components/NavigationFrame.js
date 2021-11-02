@@ -25,7 +25,6 @@ import Divider from "@material-ui/core/Divider";
 import Hidden from "@material-ui/core/Hidden";
 import IconButton from "@material-ui/core/IconButton";
 import SolanaIcon from "./SolanaIcon";
-import CodeIcon from "@material-ui/icons/Code";
 import Tooltip from "@material-ui/core/Tooltip";
 import ImportExportIcon from "@material-ui/icons/ImportExport";
 import AddAccountDialog from "./AddAccountDialog";
@@ -98,8 +97,9 @@ export default function NavigationFrame({ children }) {
             */}
           </div>
         )}
-        <Toolbar>
-          <Typography variant="h6" className={classes.title} component="h1">
+        <Toolbar style={{background:"#061529"}}>
+          <Typography style={{color: "white",
+                    }} variant="h6"  className={classes.title} component="h1">
             {isExtensionWidth ? "Sollet" : "ITSC Wallet"}
           </Typography>
           <NavigationButtons />
@@ -357,8 +357,9 @@ function WalletSelector() {
       />
       <Hidden xsDown>
         <Link to='/profile'>
-      <Button
-          color="inherit"
+      <Button style={{color:"white",
+                      fontweight:"bold"}}         
+          
           onClick={(e) => setAnchorEl(e.target)}
           className={classes.button}
         >
