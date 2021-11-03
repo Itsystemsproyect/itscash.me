@@ -31,8 +31,8 @@ const Navbar = () => {
             <pre className="tituitsc"> ITSYSTEMS PROJECT</pre>
           </div>
           <Menu theme="dark" mode="horizontal" defaultSelectedKeys={["2"]}>
-            <Menu.Item key="1">
-              <Link to="/">Home</Link>
+            <Menu.Item key="1" disabled> 
+              {`Hola ${user.username}`}
             </Menu.Item>
             {/* <Menu.Item key="2"><Link to='/Dashboard'>Dashboard</Link></Menu.Item> */}
             <Menu.Item key="2">
