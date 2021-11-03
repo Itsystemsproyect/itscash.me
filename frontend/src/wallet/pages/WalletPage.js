@@ -6,7 +6,6 @@ import { useIsProdNetwork } from '../utils/connection';
 import DebugButtons from '../components/DebugButtons';
 import { makeStyles } from '@material-ui/core';
 import { useIsExtensionWidth } from '../utils/utils';
-import Particulas from "../../components/particulas/Particulas";
 
 const useStyles = makeStyles((theme) => ({
   container: {

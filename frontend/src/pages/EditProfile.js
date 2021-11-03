@@ -1,8 +1,8 @@
-import React, { useState, useContext, useEffect } from "react";
-import AlertContext from "../context/alert/alertContext";
+import React, { useState, useContext } from "react";
+//import AlertContext from "../context/alert/alertContext";
 import AuthContext from "../context/auth/authContext";
-import { Link } from "react-router-dom";
-import itsc from "../assets/img/itscx400.svg";
+//import { Link } from "react-router-dom";
+//import itsc from "../assets/img/itscx400.svg";
 import axios from "axios";
 import '../assets/css/EditProfile.css'
 
@@ -24,7 +24,7 @@ const EditProfile = (props) => {
 
   const {username, telefono, empresa, instagram_link, facebook_link, twitter_link, wallet_address} = localUser;
 
-  const [updated, setUpdated] = useState(false);
+  const [setUpdated] = useState(false);
   
   
   

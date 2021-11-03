@@ -1,12 +1,11 @@
-import React, { Suspense, useState } from "react";
-import { makeStyles, List, ListItem } from "@material-ui/core";
+import React, { Suspense } from "react";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import {
   ThemeProvider,
   unstable_createMuiStrictModeTheme as createMuiTheme,
 } from "@material-ui/core/styles";
-import blue from "@material-ui/core/colors/blue";
+
 //import DialogTitle from '@material-ui/core/DialogTitle';
 //import DialogContent from '@material-ui/core/DialogContent';
 //import DialogActions from '@material-ui/core/DialogActions';
@@ -84,9 +83,9 @@ export default function App2() {
 function PageContents() {
   const wallet = useWallet();
   const [page] = usePage();
-  const [showWalletSuggestion, setShowWalletSuggestion] = useState(true);
-  const suggestionKey = "private-irgnore-wallet-suggestion";
-  const ignoreSuggestion = window.localStorage.getItem(suggestionKey);
+  
+
+  
 
   if (!wallet) {
     return (
@@ -119,15 +118,7 @@ function PageContents() {
   }
 }
 
-const useStyles = makeStyles(() => ({
-  walletButton: {
-    width: "100%",
-    padding: "16px",
-    "&:hover": {
-      cursor: "pointer",
-    },
-  },
-}));
+
 
 /*
 function WalletSuggestionDialog({ open, onClose, onIgnore }) {
