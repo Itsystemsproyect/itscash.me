@@ -356,7 +356,7 @@ function WalletSelector() {
         onClose={() => setDeleteMnemonicOpen(false)}
       />
       <Hidden xsDown>
-        <Link to='/profile'>
+      <Link to='/profile'>
       <Button style={{color:"white",
                       fontweight:"bold"}}         
           
@@ -374,7 +374,18 @@ function WalletSelector() {
           Cuenta
         </Button>
       </Hidden>
-      <Hidden smUp>
+     
+      <Hidden smUp> 
+      <Link to='/profile'>
+      <Button style={{color:"white",
+                      fontweight:"bold"}}         
+          
+          onClick={(e) => setAnchorEl(e.target)}
+          className={classes.button}
+        >
+          Volver
+        </Button>
+        </Link>     
         <Tooltip title="Select Account" arrow>
           <IconButton color="inherit" onClick={(e) => setAnchorEl(e.target)}>
             <AccountIcon />
