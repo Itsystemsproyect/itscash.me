@@ -32,7 +32,7 @@ const Navbar = () => {
           </div>
           <Menu theme="dark" mode="horizontal" defaultSelectedKeys={["2"]}>
             <Menu.Item key="1" disabled> 
-              {`Hola ${user.username}`}
+              {user && `Hola ${user.username}`}
             </Menu.Item>
             {/* <Menu.Item key="2"><Link to='/Dashboard'>Dashboard</Link></Menu.Item> */}
             <Menu.Item key="2">
