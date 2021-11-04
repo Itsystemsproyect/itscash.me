@@ -14,19 +14,19 @@ const { Content, Footer } = Layout;
 
 const Home = () => {
   return (
-   <>
-     <Layout className="layout">
+    <>
+      <Layout className="layout">
         <Navbar />
         <Content className="banner0">
           <div id="parti" style={{ position: "absolute" }}>
-           <Particulas height="100vh" width="100%" />
+            <Particulas height="100vh" width="100%" />
           </div>
           <div className="logobanner">
             <div className="imglogo">
               <img src={itsc} alt="logo" />
             </div>
             <p className="tituloits">
-              PROYECTO DE RECOMPENSAS POR PRODUCTIVIDAD LABORAL
+              PROYECTO DE RECOMPENSAS DE EDUCACIÓN EMPRESARIAL
             </p>
             <div className="botones">
               <Link to="/login">
@@ -56,9 +56,9 @@ const Home = () => {
             <div className="vision info">
               VISION
               <p className="parrasc">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sollicitudin vitae lorem quis ultricies. Quisque nec imperdiet ex. Ut pulvinar eu mi quis efficitur.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sollicitudin vitae lorem quis ultricies. Quisque nec imperdiet ex. Ut pulvinar eu mi quis efficitur.
               </p>
-              <img className="misimg" src={imgvision} alt=""/>
+              <img className="misimg" src={imgvision} alt="" />
             </div>
             <div className="objetivos info">
               <img className="misimg" src={imgobjetivos} alt="" />

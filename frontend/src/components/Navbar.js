@@ -28,10 +28,10 @@ const Navbar = () => {
               width={50}
               height="auto"
             />
-            <pre className="tituitsc"> ITSYSTEMS PROJECT</pre>
+            <pre className="tituitsc"> ITS Cash</pre>
           </div>
           <Menu theme="dark" mode="horizontal" defaultSelectedKeys={["2"]}>
-            <Menu.Item key="1" disabled> 
+            <Menu.Item key="1" disabled>
               {user && `Hola ${user.username}`}
             </Menu.Item>
             {/* <Menu.Item key="2"><Link to='/Dashboard'>Dashboard</Link></Menu.Item> */}
@@ -69,7 +69,7 @@ const Navbar = () => {
               width={50}
               height="auto"
             />
-            <pre className="tituitsc"> ITSYSTEMS PROJECT</pre>
+            <pre className="tituitsc"> ITS PROJECT</pre>
           </div>
           <Menu theme="dark" mode="horizontal" defaultSelectedKeys={["2"]}>
             <Menu.Item key="1">
