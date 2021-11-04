@@ -151,7 +151,7 @@ const Navbar = () => {
             width={50}
             height="auto"
           />
-          <pre className="tituitsc"> ITSYSTEMS PROJECT</pre>
+          <pre className="tituitsc"> ITS PROJECT</pre>
         </div>
         </NavLink>
 
