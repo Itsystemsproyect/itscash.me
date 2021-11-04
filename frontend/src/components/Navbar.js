@@ -19,44 +19,6 @@ const Navbar = () => {
     logout();
   };
 
-<<<<<<< HEAD
-  const authLinks = (
-    <>
-      <Header>
-        <div className="nav0">
-          <div className="logo">
-            <img
-              className="logoimg"
-              src={itsc}
-              alt="img"
-              width={50}
-              height="auto"
-            />
-            <pre className="tituitsc"> ITS Cash</pre>
-          </div>
-          <Menu theme="dark" mode="horizontal" defaultSelectedKeys={["2"]}>
-            <Menu.Item key="1" disabled>
-              {user && `Hola ${user.username}`}
-            </Menu.Item>
-            {/* <Menu.Item key="2"><Link to='/Dashboard'>Dashboard</Link></Menu.Item> */}
-            <Menu.Item key="2">
-              <Link to="/wallet">Wallet</Link>
-            </Menu.Item>
-
-            <SubMenu key="SubMenu" title="Perfil">
-              <Menu.Item key="setting:1">
-                <Link to="/profile">
-                  <Button type="text">Ver Perfil</Button>
-                </Link>
-              </Menu.Item>
-              <Menu.Item key="setting:2">
-                <Button type="text" onClick={handleLogout}>
-                  Cerrar Session
-                </Button>
-              </Menu.Item>
-            </SubMenu>
-          </Menu>
-=======
   const guestLinks = (<>
     <nav className="navbar">
       <div className="nav-container">
@@ -70,30 +32,9 @@ const Navbar = () => {
             height="auto"
           />
           <pre className="tituitsc"> ITSYSTEMS PROJECT</pre>
->>>>>>> Cambiar la navbar
         </div>
         </NavLink>
 
-<<<<<<< HEAD
-  const guestLinks = (
-    <>
-      <Header>
-        <div className="nav0">
-          <div className="logo">
-            <img
-              className="logoimg"
-              src={itsc}
-              alt="img"
-              width={50}
-              height="auto"
-            />
-            <pre className="tituitsc"> ITS PROJECT</pre>
-          </div>
-          <Menu theme="dark" mode="horizontal" defaultSelectedKeys={["2"]}>
-            <Menu.Item key="1">
-              <Link to="/">Home</Link>
-            </Menu.Item>
-=======
         <ul className={click ? "nav-menu active" : "nav-menu"}>
           <li className="nav-item">
             
@@ -137,7 +78,6 @@ const Navbar = () => {
       </div>
     </nav>
   </>)
->>>>>>> Cambiar la navbar
 
   const authLinks = (<>
     <nav className="navbar">
