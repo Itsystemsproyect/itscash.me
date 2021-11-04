@@ -23,21 +23,21 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="nav-container">
         <NavLink exact to="/" className="nav-logo">
-        <div className="itslogo">
-          <img
-            className="itslogoimg"
-            src={itsc}
-            alt="img"
-            width={50}
-            height="auto"
-          />
-          <pre className="tituitsc"> ITSYSTEMS PROJECT</pre>
-        </div>
+          <div className="itslogo">
+            <img
+              className="itslogoimg"
+              src={itsc}
+              alt="img"
+              width={50}
+              height="auto"
+            />
+            <pre className="tituitsc"> ITS PROJECT</pre>
+          </div>
         </NavLink>
 
         <ul className={click ? "nav-menu active" : "nav-menu"}>
           <li className="nav-item">
-            
+
             <NavLink
               exact
               to="/"
@@ -70,7 +70,7 @@ const Navbar = () => {
               Regístrate
             </NavLink>
           </li>
-        
+
         </ul>
         <div className="nav-icon" onClick={handleClick}>
           <i className={click ? "fas fa-times" : "fas fa-bars"}></i>
@@ -83,19 +83,19 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="nav-container">
         <NavLink exact to="/" className="nav-logo">
-        <div className="itslogo">
-          <img
-            className="itslogoimg"
-            src={itsc}
-            alt="img"
-            width={50}
-            height="auto"
-          />
-          <pre className="tituitsc"> ITS PROJECT</pre>
-        </div>
+          <div className="itslogo">
+            <img
+              className="itslogoimg"
+              src={itsc}
+              alt="img"
+              width={50}
+              height="auto"
+            />
+            <pre className="tituitsc"> ITS PROJECT</pre>
+          </div>
         </NavLink>
 
-        <ul className={click ? "nav-menu active" : "nav-menu"}>       
+        <ul className={click ? "nav-menu active" : "nav-menu"}>
           <li className="nav-item">
             <NavLink
               exact
@@ -119,9 +119,9 @@ const Navbar = () => {
             </NavLink>
           </li>
           <li className="nav-item">
-          <Button type="text" onClick={handleLogout} className="nav-links">
+            <Button type="text" onClick={handleLogout} className="nav-links">
               <span className="navButton">Log-Out</span>
-          </Button>
+            </Button>
           </li>
         </ul>
         <div className="nav-icon" onClick={handleClick}>
@@ -131,9 +131,9 @@ const Navbar = () => {
     </nav>
   </>)
 
-return <>{isAuthenticated ? authLinks : guestLinks}</>;
+  return <>{isAuthenticated ? authLinks : guestLinks}</>;
 
-  
+
 };
 
 export default Navbar;
