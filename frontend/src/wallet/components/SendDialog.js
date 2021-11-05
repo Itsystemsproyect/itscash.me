@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import DialogActions from '@material-ui/core/DialogActions';
 import Button from '@material-ui/core/Button';
+import Checkbox from '@material-ui/core/Checkbox';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import DialogContent from '@material-ui/core/DialogContent';
 import TextField from '@material-ui/core/TextField';
@@ -300,11 +301,18 @@ function SendSplDialog({ onClose, publicKey, balanceInfo, onSubmitRef }) {
     })();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [destinationAddress, wallet, mintString, isDomainName, domainOwner]);
+  
+  
   useEffect(() => {
     return () => {
       setOverrideDestinationCheck(false);
     };
   }, [setOverrideDestinationCheck]);
+
+  
+
+  
+
   async function makeTransaction() {
     let amount = Math.round(parseFloat(transferAmountString) * 10 ** decimals);
     if (!amount || amount <= 0) {
@@ -332,6 +340,7 @@ function SendSplDialog({ onClose, publicKey, balanceInfo, onSubmitRef }) {
   return (
     <>
       <DialogContent>{fields}</DialogContent>
+      
       <DialogActions>
         {shouldShowOverride && (
           <div
@@ -342,11 +351,18 @@ function SendSplDialog({ onClose, publicKey, balanceInfo, onSubmitRef }) {
             }}
           >
             <b>This address has no funds. Are you sure it's correct?</b>
+            <Checkbox 
+            checked={overrideDestinationCheck}
+            onChange={(e) => setOverrideDestinationCheck(e.target.checked)}
+            color='primary'
+            /> 
+            {/* 
             <Switch
               checked={overrideDestinationCheck}
               onChange={(e) => setOverrideDestinationCheck(e.target.checked)}
               color="primary"
             />
+            */}
           </div>
         )}
         <Button onClick={onClose}>Cancel</Button>
