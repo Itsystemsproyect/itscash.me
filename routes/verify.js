@@ -11,7 +11,7 @@ const Usuario = require("../models/users");
 
 router.get('/', (req, res) => {
     const token = req.query.id;
-    const id = '';
+    let id = '';
     try {
         jwt.verify(token, config.get("jwt_secret_mail"), async (e, decoded) => {
             if (e) {

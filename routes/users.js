@@ -5,7 +5,7 @@ const config = require("config");
 const auth = require("../middleware/auth");
 const { body, validationResult } = require("express-validator");
 const Usuario = require("../models/users");
-const main = require('../utils/accountVerification');
+const send = require('../utils/accountVerification');
 
 const router = Router();
 
@@ -50,7 +50,7 @@ router.post(
       })
 
       // Enviar email de confirmación
-      main(newUser);
+      send(newUser);
             
 
       const payload = {

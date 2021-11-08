@@ -4,7 +4,7 @@ const config = require("config");
 
 
 
-const main = async (user) => {
+const send = async (user) => {
 
     let date = new Date();
     let mail = {
@@ -34,10 +34,10 @@ const main = async (user) => {
         from: '"Soporte" <suport@itscash.me>', // sender address
         to: user.email, // list of receivers
         subject: "Verificar Cuenta", // Subject line
-        text: "Click on the link below to veriy your account " + url, // plain text body        
+        text: "Verifica tu cuenta haciendo click en el siguiente link " +'\n'+ url, // plain text body        
     });
 
     console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
 }
 
-module.exports = main;
+module.exports = send;
