@@ -49,6 +49,10 @@ const Usuario = sequelize.define(
       type: Sequelize.TEXT,
       default: "user",
     },
+    validado: {
+      type: Sequelize.BOOLEAN,
+      default: false
+    }
   },
   {
     timestamps: false,

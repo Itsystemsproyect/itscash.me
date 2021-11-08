@@ -67,6 +67,9 @@ const AuthState = (props) => {
     }
   };
 
+  // Verify Account
+  
+
   
   // Login User
   const login = async (formData) => {

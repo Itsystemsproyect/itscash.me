@@ -4,6 +4,7 @@
     "PASSWORD": "$Rz8sgHx4yWWgTr@",
     "DB":"dbitscash",
     "dialect": "postgres",
-    "jwtSecret": "veryVERYverylongstring,xmckzdsnfsaodpoaspcxm<ksdmamfksofmkx123009$%&%&&/&"    
+    "jwtSecret": "veryVERYverylongstring,xmckzdsnfsaodpoaspcxm<ksdmamfksofmkx123009$%&%&&/&",
+    "baseUrl": "https://www.itscash.me/api/"    
     
 }

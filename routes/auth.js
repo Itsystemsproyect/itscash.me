@@ -6,6 +6,7 @@ const config = require("config");
 const auth = require("../middleware/auth");
 const { body, validationResult } = require("express-validator");
 
+
 const Usuario = require("../models/users");
 
 // @route       GET api/auth
