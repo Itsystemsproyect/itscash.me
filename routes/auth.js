@@ -14,7 +14,7 @@ const isVerified = require("../middleware/isVerified");
 // @desc        Logear un usuario
 // @access      ruta privada
 
-router.get("/", auth, isVerified,async (req, res) => {
+router.get("/", auth,async (req, res) => {
   try {
     const id  = req.user.id;
     
