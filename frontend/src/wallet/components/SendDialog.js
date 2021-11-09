@@ -35,7 +35,7 @@ import {
   WRAPPED_SOL_MINT,
 } from '../utils/tokens/instructions';
 import { parseTokenAccountData } from '../utils/tokens/data';
-import { Switch, Tooltip } from '@material-ui/core';
+import { Tooltip } from '@material-ui/core';
 import { EthFeeEstimate } from './EthFeeEstimate';
 import { resolveDomainName, resolveTwitterHandle } from '../utils/name-service';
 
@@ -98,9 +98,8 @@ export default function SendDialog({ open, onClose, publicKey, balanceInfo }) {
     } else {
       const erc20Tab = (
         <Tab
-          label={`${swapCoinInfo.erc20Contract ? 'ERC20' : 'Native'} ${
-            swapCoinInfo.ticker
-          }`}
+          label={`${swapCoinInfo.erc20Contract ? 'ERC20' : 'Native'} ${swapCoinInfo.ticker
+            }`}
           key="swap"
           value="swap"
         />
@@ -198,7 +197,7 @@ export default function SendDialog({ open, onClose, publicKey, balanceInfo }) {
         )}
       </DialogForm>
       {ethAccount &&
-      (swapCoinInfo?.blockchain === 'eth' || swapCoinInfo?.erc20Contract) ? (
+        (swapCoinInfo?.blockchain === 'eth' || swapCoinInfo?.erc20Contract) ? (
         <EthWithdrawalCompleter ethAccount={ethAccount} publicKey={publicKey} />
       ) : null}
     </>
@@ -287,8 +286,7 @@ function SendSplDialog({ onClose, publicKey, balanceInfo, onSubmitRef }) {
         } else {
           setPassValidation(true);
           setAddressHelperText(
-            `Destination is a Solana address: ${
-              isDomainName ? domainOwner : destinationAddress
+            `Destination is a Solana address: ${isDomainName ? domainOwner : destinationAddress
             }`,
           );
         }
@@ -301,17 +299,17 @@ function SendSplDialog({ onClose, publicKey, balanceInfo, onSubmitRef }) {
     })();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [destinationAddress, wallet, mintString, isDomainName, domainOwner]);
-  
-  
+
+
   useEffect(() => {
     return () => {
       setOverrideDestinationCheck(false);
     };
   }, [setOverrideDestinationCheck]);
 
-  
 
-  
+
+
 
   async function makeTransaction() {
     let amount = Math.round(parseFloat(transferAmountString) * 10 ** decimals);
@@ -340,7 +338,7 @@ function SendSplDialog({ onClose, publicKey, balanceInfo, onSubmitRef }) {
   return (
     <>
       <DialogContent>{fields}</DialogContent>
-      
+
       <DialogActions>
         {shouldShowOverride && (
           <div
@@ -351,11 +349,11 @@ function SendSplDialog({ onClose, publicKey, balanceInfo, onSubmitRef }) {
             }}
           >
             <b>This address has no funds. Are you sure it's correct?</b>
-            <Checkbox 
-            checked={overrideDestinationCheck}
-            onChange={(e) => setOverrideDestinationCheck(e.target.checked)}
-            color='primary'
-            /> 
+            <Checkbox
+              checked={overrideDestinationCheck}
+              onChange={(e) => setOverrideDestinationCheck(e.target.checked)}
+              color='primary'
+            />
             {/* 
             <Switch
               checked={overrideDestinationCheck}
@@ -401,8 +399,8 @@ function SendSwapDialog({
     wusdcToSplUsdc || wusdtToSplUsdt || usdcToSplWUsdc
       ? 'sol'
       : swapCoinInfo.blockchain === 'sol'
-      ? 'eth'
-      : swapCoinInfo.blockchain;
+        ? 'eth'
+        : swapCoinInfo.blockchain;
   const needMetamask = blockchain === 'eth';
 
   const [ethBalance] = useAsyncData(
@@ -414,8 +412,8 @@ function SendSwapDialog({
   );
   const ethFeeData = useSwapApiGet(
     blockchain === 'eth' &&
-      `fees/eth/${ethAccount}` +
-        (swapCoinInfo.erc20Contract ? '/' + swapCoinInfo.erc20Contract : ''),
+    `fees/eth/${ethAccount}` +
+    (swapCoinInfo.erc20Contract ? '/' + swapCoinInfo.erc20Contract : ''),
     { refreshInterval: 2000 },
   );
   const [ethFeeEstimate] = ethFeeData;
@@ -549,8 +547,8 @@ function SendSwapDialog({
           {blockchain === 'eth' && swapCoinInfo.erc20Contract
             ? 'ERC20'
             : blockchain === 'sol' && swapCoinInfo.splMint
-            ? 'SPL'
-            : 'native'}{' '}
+              ? 'SPL'
+              : 'native'}{' '}
           {swapCoinInfo.ticker}
           {needMetamask ? ' via MetaMask' : null}.
         </DialogContentText>

@@ -42,13 +42,14 @@
   list-style: none;
   text-align: center;
   margin-right: 2rem;
+  margin-top: 10px;
 }
 
 .nav-links {
   color: #fff;
   text-decoration: none;
   padding: 0.5rem 1rem;
-  height: 100%;
+  padding-top: 0px;  
   border-bottom: 3px solid transparent;
 }
 .navButton {
@@ -79,11 +80,11 @@
   background: /*#ffdd40;*/ #558f87;
 }
 
-.nav-item .active {
-  color: /*#ffdd40;*/ #558f87;
-  border: 1px solid /*#ffdd40;*/ #558f87;
+/*.nav-item .active {
+  /*color: /*#ffdd40; #558f87;
+  
 }
-
+*/
 .nav-icon {
   display: none;
 }
@@ -131,5 +132,5 @@
 }
 
 .linkContainer {
-  margin-top: 1.5rem;
+  height: 62.101px;
 }

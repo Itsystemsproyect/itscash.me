@@ -74,6 +74,11 @@ balanced-match@^1.0.0:
   resolved "https://registry.yarnpkg.com/balanced-match/-/balanced-match-1.0.2.tgz#e83e3a7e3f300b34cb9d87f615fa0cbf357690ee"
   integrity sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==
 
+base32.js@0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/base32.js/-/base32.js-0.1.0.tgz#b582dec693c2f11e893cf064ee6ac5b6131a2202"
+  integrity sha1-tYLexpPC8R6JPPBk7mrFthMaIgI=
+
 basic-auth@~2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/basic-auth/-/basic-auth-2.0.1.tgz#b998279bf47ce38344b4f3cf916d4679bbf51e3a"
@@ -655,6 +660,11 @@ ipaddr.js@1.9.1:
   resolved "https://registry.yarnpkg.com/ipaddr.js/-/ipaddr.js-1.9.1.tgz#bff38543eeb8984825079ff3a2a8e6cbd46781b3"
   integrity sha512-0KI/607xoxSToH7GjN1FfSbLoU0+btTicjsQSWQlh/hZykN8KpmMf7uYwPW3R+akZ6R/w18ZlXSHBYXiYUPO3g==
 
+ipv6-normalize@1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/ipv6-normalize/-/ipv6-normalize-1.0.1.tgz#1b3258290d365fa83239e89907dde4592e7620a8"
+  integrity sha1-GzJYKQ02X6gyOeiZB93kWS52IKg=
+
 is-binary-path@~2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/is-binary-path/-/is-binary-path-2.1.0.tgz#ea1f7f3b80f064236e83470f86c09c254fb45b09"
@@ -943,6 +953,16 @@ negotiator@0.6.2:
   version "0.6.2"
   resolved "https://registry.yarnpkg.com/negotiator/-/negotiator-0.6.2.tgz#feacf7ccf525a77ae9634436a64883ffeca346fb"
   integrity sha512-hZXc7K2e+PgeI1eDBe/10Ard4ekbfrrqG8Ep+8Jmf4JID2bNg7NvCPOZN+kfF574pFQI7mum2AUqDidoKqcTOw==
+
+nodemailer@6.6.1:
+  version "6.6.1"
+  resolved "https://registry.yarnpkg.com/nodemailer/-/nodemailer-6.6.1.tgz#2a05fbf205b897d71bf43884167b5d4d3bd01b99"
+  integrity sha512-1xzFN3gqv+/qJ6YRyxBxfTYstLNt0FCtZaFRvf4Sg9wxNGWbwFmGXVpfSi6ThGK6aRxAo+KjHtYSW8NvCsNSAg==
+
+nodemailer@^6.7.0:
+  version "6.7.0"
+  resolved "https://registry.yarnpkg.com/nodemailer/-/nodemailer-6.7.0.tgz#86614722c4e0c33d1b5b02aecb90d6d629932b0d"
+  integrity sha512-AtiTVUFHLiiDnMQ43zi0YgkzHOEWUkhDgPlBXrsDzJiJvB29Alo4OKxHQ0ugF3gRqRQIneCLtZU3yiUo7pItZw==
 
 nodemon@^2.0.14:
   version "2.0.14"
@@ -1341,6 +1361,15 @@ signal-exit@^3.0.2:
   version "3.0.5"
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.5.tgz#9e3e8cc0c75a99472b44321033a7702e7738252f"
   integrity sha512-KWcOiKeQj6ZyXx7zq4YxSMgHRlod4czeBQZrPb8OKcohcqAXShm7E20kEMle9WBt26hFcAf0qLOcp5zmY7kOqQ==
+
+smtp-server@^3.9.0:
+  version "3.9.0"
+  resolved "https://registry.yarnpkg.com/smtp-server/-/smtp-server-3.9.0.tgz#5fdf39f25911f1607f6d3c0b82dae2891761078c"
+  integrity sha512-CHws5GkHjfIikue6vSdp3uRnmW85l0JJQibVwDs7S5aIUppXJA9Y60XcdxcaCLXmAnd8V8wbtav5KY92nCZeag==
+  dependencies:
+    base32.js "0.1.0"
+    ipv6-normalize "1.0.1"
+    nodemailer "6.6.1"
 
 spawn-command@^0.0.2-1:
   version "0.0.2-1"

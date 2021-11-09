@@ -11,7 +11,7 @@ const Navbar = () => {
 
   const authContext = useContext(AuthContext);
 
-  const { isAuthenticated, logout, user } = authContext;
+  const { isAuthenticated, logout } = authContext;
 
   const handleClick = () => setClick(!click);
 
@@ -35,43 +35,43 @@ const Navbar = () => {
           </div>
         </NavLink>
         <div className="linkContainer">
-        <ul className={click ? "nav-menu active" : "nav-menu"}>
-          <li className="nav-item">
+          <ul className={click ? "nav-menu active" : "nav-menu"}>
+            <li className="nav-item">
 
-            <NavLink
-              exact
-              to="/"
-              activeClassName="active"
-              className="nav-links"
-              onClick={handleClick}
-            >
-              Home
-            </NavLink>
-          </li>
-          <li className="nav-item">
-            <NavLink
-              exact
-              to="/login"
-              activeClassName="active"
-              className="nav-links"
-              onClick={handleClick}
-            >
-              Login
-            </NavLink>
-          </li>
-          <li className="nav-item">
-            <NavLink
-              exact
-              to="/register"
-              activeClassName="active"
-              className="nav-links"
-              onClick={handleClick}
-            >
-              Regístrate
-            </NavLink>
-          </li>
+              <NavLink
+                exact
+                to="/"
+                activeClassName="active"
+                className="nav-links"
+                onClick={handleClick}
+              >
+                Home
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink
+                exact
+                to="/login"
+                activeClassName="active"
+                className="nav-links"
+                onClick={handleClick}
+              >
+                Login
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink
+                exact
+                to="/register"
+                activeClassName="active"
+                className="nav-links"
+                onClick={handleClick}
+              >
+                Regístrate
+              </NavLink>
+            </li>
 
-        </ul>
+          </ul>
         </div>
         <div className="nav-icon" onClick={handleClick}>
           <i className={click ? "fas fa-times" : "fas fa-bars"}></i>
@@ -96,35 +96,35 @@ const Navbar = () => {
           </div>
         </NavLink>
         <div className="linkContainer">
-        <ul className={click ? "nav-menu active" : "nav-menu"}>
-          <li className="nav-item">
-            <NavLink
-              exact
-              to="/profile"
-              activeClassName="active"
-              className="nav-links"
-              onClick={handleClick}
-            >
-              Perfil
-            </NavLink>
-          </li>
-          <li className="nav-item">
-            <NavLink
-              exact
-              to="/wallet"
-              activeClassName="active"
-              className="nav-links"
-              onClick={handleClick}
-            >
-              Wallet
-            </NavLink>
-          </li>
-          <li className="nav-item">
-            <Button type="text" onClick={handleLogout} className="nav-links">
-              <span className="navButton">Log-Out</span>
-            </Button>
-          </li>
-        </ul>
+          <ul className={click ? "nav-menu active" : "nav-menu"}>
+            <li className="nav-item">
+              <NavLink
+                exact
+                to="/profile"
+                activeClassName="active"
+                className="nav-links"
+                onClick={handleClick}
+              >
+                Perfil
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink
+                exact
+                to="/wallet"
+                activeClassName="active"
+                className="nav-links"
+                onClick={handleClick}
+              >
+                Wallet
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <Button type="text" onClick={handleLogout} className="nav-links">
+                <span className="navButton">Log-Out</span>
+              </Button>
+            </li>
+          </ul>
         </div>
         <div className="nav-icon" onClick={handleClick}>
           <i className={click ? "fas fa-times" : "fas fa-bars"}></i>
