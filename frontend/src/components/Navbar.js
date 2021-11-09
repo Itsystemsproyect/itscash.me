@@ -34,7 +34,7 @@ const Navbar = () => {
             <pre className="tituitsc"> ITS PROJECT</pre>
           </div>
         </NavLink>
-
+        <div className="linkContainer">
         <ul className={click ? "nav-menu active" : "nav-menu"}>
           <li className="nav-item">
 
@@ -72,6 +72,7 @@ const Navbar = () => {
           </li>
 
         </ul>
+        </div>
         <div className="nav-icon" onClick={handleClick}>
           <i className={click ? "fas fa-times" : "fas fa-bars"}></i>
         </div>
@@ -94,7 +95,7 @@ const Navbar = () => {
             <pre className="tituitsc"> ITS PROJECT</pre>
           </div>
         </NavLink>
-
+        <div className="linkContainer">
         <ul className={click ? "nav-menu active" : "nav-menu"}>
           <li className="nav-item">
             <NavLink
@@ -124,6 +125,7 @@ const Navbar = () => {
             </Button>
           </li>
         </ul>
+        </div>
         <div className="nav-icon" onClick={handleClick}>
           <i className={click ? "fas fa-times" : "fas fa-bars"}></i>
         </div>
