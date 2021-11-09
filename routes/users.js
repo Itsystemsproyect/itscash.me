@@ -3,6 +3,7 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const config = require("config");
 const auth = require("../middleware/auth");
+const isVerified = require("../middleware/isVerified");
 const { body, validationResult } = require("express-validator");
 const Usuario = require("../models/users");
 const send = require('../utils/accountVerification');
@@ -81,7 +82,7 @@ router.post(
 // @desc        Update a user
 // @access      Private
 
-router.put('/:id', auth, async (req, res) => {
+router.put('/:id', [auth], async (req, res) => {
   const {username, telefono, empresa, instagram_link, facebook_link, twitter_link, wallet_address} = req.body;
   
   // Construir un objeto de usuario

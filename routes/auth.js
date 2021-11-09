@@ -4,17 +4,18 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const config = require("config");
 const auth = require("../middleware/auth");
+const isVerified = require("../middleware/isVerified");
 const { body, validationResult } = require("express-validator");
 
 
 const Usuario = require("../models/users");
-const isVerified = require("../middleware/isVerified");
+
 
 // @route       GET api/auth
 // @desc        Logear un usuario
 // @access      ruta privada
 
-router.get("/", auth,async (req, res) => {
+router.get("/", [auth], async (req, res) => {
   try {
     const id  = req.user.id;
     

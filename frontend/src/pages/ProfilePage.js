@@ -71,8 +71,9 @@ const ProfilePage = () => {
                     <div className="dialogContainer">
                     <p>Su cuenta no está verificada. Revise su correo y haga click en el link de verificación.</p>
                     <p>Si ya verificó su cuenta, haga click <a className="dialogLink" href="/profile"><Button type="link" size='large'><span className="dialogLink">aquí</span></Button></a></p>
-                    <p>Si no le ha llegado el link a su correo, solicite otro link de verificación en el siguiente botón</p>
+                    {/* <p>Si no le ha llegado el link a su correo, solicite otro link de verificación en el siguiente botón</p>
                     <Button className="btnprofile" type='primary'>Solicitar Link</Button>
+                    */}
                     </div>
                 </Content>
             

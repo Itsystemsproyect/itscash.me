@@ -17,6 +17,9 @@ CREATE TABLE IF NOT EXISTS Usuario (
 -- Cambiar el rol a admin
 UPDATE usuario SET rol='admin' WHERE email='felix@gmail.com';
 
+-- Cambiar validado a TRUE
+UPDATE usuario SET validado=TRUE WHERE email='alberto@gmail.com';
+
 
 -- Agregar campo 'validado'
 ALTER TABLE usuario ADD COLUMN "validado" BOOLEAN DEFAULT FALSE;
