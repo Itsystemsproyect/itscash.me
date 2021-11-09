@@ -4722,7 +4722,7 @@ cross-fetch@3.0.6:
   dependencies:
     node-fetch "2.6.1"
 
-cross-fetch@^3.1.4:
+cross-fetch@^3.0.1, cross-fetch@^3.1.4:
   version "3.1.4"
   resolved "https://registry.yarnpkg.com/cross-fetch/-/cross-fetch-3.1.4.tgz#9723f3a3a247bf8b89039f3a380a9244e8fa2f39"
   integrity sha512-1eAtFWdIubi6T4XPy6ei9iUFoKpUkIF971QLN8lIvvvwueI65+Nw5haMNKUwfJxabqlIIDODJKGrQ66gxC0PbQ==
@@ -9440,6 +9440,13 @@ node-releases@^2.0.0:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/node-releases/-/node-releases-2.0.1.tgz#3d1d395f204f1f2f29a54358b9fb678765ad2fc5"
   integrity sha512-CqyzN6z7Q6aMeF/ktcMVTzhAHCEpf8SOarwpzpf8pNBY2k5/oM34UHldUwp8VKI7uxct2HxSRdJjBaZeESzcxA==
+
+nomics@^0.5.7:
+  version "0.5.7"
+  resolved "https://registry.yarnpkg.com/nomics/-/nomics-0.5.7.tgz#9b191906450018d7410f7e46cce41e5bbe08ec85"
+  integrity sha512-lKjhkDPHpW1XCY33kETjCdOvpHBxzsluekbywDU4ijih+ab1nbuiLhM9oUsj+72z+wg/vp1GpuPXUvKDEEeGcw==
+  dependencies:
+    cross-fetch "^3.0.1"
 
 normalize-package-data@^2.5.0:
   version "2.5.0"

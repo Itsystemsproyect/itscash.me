@@ -1,6 +1,7 @@
 import React from "react";
 import { Layout, Button } from "antd";
 
+
 import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import itsc from "../assets/img/itscx400.svg";
@@ -40,7 +41,9 @@ const Home = () => {
             </div>
           </div>
         </Content>
-        <div className="transactionstatic"></div>
+
+        <div className="transactionstatic">
+        </div>
         <Content className="content2">
           <div className="descripcion">ACERCA DE </div>
           <div className="contenedor2">
