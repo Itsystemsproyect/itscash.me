@@ -15,7 +15,7 @@ const { Content } = Layout;
 
 const ProfilePage = () => {
     const authContext = useContext(AuthContext);
-    const { user, loadUser } = authContext;
+    const { user, loadUser, isVerified, isAuthenticated } = authContext;
 
     useEffect(() => {
         loadUser();
@@ -34,6 +34,7 @@ const ProfilePage = () => {
 
     return (
         <>
+        {isVerified ? 
         <Layout>
             <Navbar />
             
@@ -41,7 +42,7 @@ const ProfilePage = () => {
                     <div className='profileContainer' >
                         <div className='avatarContainer'>
                         {user && user.imagen ? userHasImage : userHasNoImage}
-                        </div>
+                        </div>                        
 
                         <Descriptions title='Información del Usuario' className='detallesUsuario' bordered>
                             <Descriptions.Item label="Nombre">{user && user.username}</Descriptions.Item>
@@ -63,6 +64,20 @@ const ProfilePage = () => {
                 </Content>
             
         </Layout>
+        :
+        <Layout>            
+            
+                <Content className="banner1">
+                    <div className="dialogContainer">
+                    <p>Su cuenta no está verificada. Revise su correo y haga click en el link de verificación.</p>
+                    <p>Si ya verificó su cuenta, haga click <a className="dialogLink" href="/profile"><Button type="link" size='large'><span className="dialogLink">aquí</span></Button></a></p>
+                    <p>Si no le ha llegado el link a su correo, solicite otro link de verificación en el siguiente botón</p>
+                    <Button className="btnprofile" type='primary'>Solicitar Link</Button>
+                    </div>
+                </Content>
+            
+        </Layout>
+        }
         </>
     )
 }

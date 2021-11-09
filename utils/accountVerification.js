@@ -34,7 +34,8 @@ const send = async (user) => {
         from: '"Soporte" <suport@itscash.me>', // sender address
         to: user.email, // list of receivers
         subject: "Verificar Cuenta", // Subject line
-        text: "Verifica tu cuenta haciendo click en el siguiente link " +'\n'+ url, // plain text body        
+        //text: "Verifica tu cuenta haciendo click en el siguiente link " +'\n'+ url, // plain text body  
+        html: `<p>Verifica tu cuenta haciendo click en este <a href=${url}>link</a></p>` 
     });
 
     console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
