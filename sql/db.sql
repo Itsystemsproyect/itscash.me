@@ -26,6 +26,12 @@ UPDATE usuario SET validado=TRUE WHERE id=1;
 -- Agregar campo 'validado'
 ALTER TABLE usuario ADD COLUMN "validado" BOOLEAN DEFAULT FALSE;
 
+-- Agregar campos para programa de referidos
+ALTER TABLE usuario ADD COLUMN "referido" text;
+ALTER TABLE usuario ADD COLUMN "referido_por" text;
+
+-- Agregar constraint not null a usuario luego de ingresar los códigos por base de datos
+ALTER TABLE usuario ALTER COLUMN referido SET NOT NULL;
 
 
 
