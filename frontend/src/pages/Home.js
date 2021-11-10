@@ -1,17 +1,27 @@
 import React from "react";
 import { Layout, Button } from "antd";
-
-
 import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
+
+import { QueryClient, QueryClientProvider } from "react-query";
+
+
 import itsc from "../assets/img/itscx400.svg";
 import Particulas from "../components/particulas/Particulas";
-import '../assets/css/Particulas.css'
+
 import imgmision from "../assets/img/mision.png";
 import imgvision from "../assets/img/vision.png";
 import imgobjetivos from "../assets/img/valores.png";
 
+import CryptoTracker from "../components/CryptoTracker";
+
+import "../assets/css/Particulas.css";
+import "../assets/css/CryptoTracker.css"
+
+
+
 const { Content, Footer } = Layout;
+const queryClient = new QueryClient();
 
 const Home = () => {
   return (
@@ -43,6 +53,10 @@ const Home = () => {
         </Content>
 
         <div className="transactionstatic">
+          <QueryClientProvider client={queryClient}>
+            <CryptoTracker cryptoName="solana" />
+            
+          </QueryClientProvider>
         </div>
         <Content className="content2">
           <div className="descripcion">ACERCA DE </div>
@@ -59,7 +73,9 @@ const Home = () => {
             <div className="vision info">
               VISION
               <p className="parrasc">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sollicitudin vitae lorem quis ultricies. Quisque nec imperdiet ex. Ut pulvinar eu mi quis efficitur.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+                sollicitudin vitae lorem quis ultricies. Quisque nec imperdiet
+                ex. Ut pulvinar eu mi quis efficitur.
               </p>
               <img className="misimg" src={imgvision} alt="" />
             </div>
