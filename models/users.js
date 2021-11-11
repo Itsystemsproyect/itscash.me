@@ -52,6 +52,12 @@ const Usuario = sequelize.define(
     validado: {
       type: Sequelize.BOOLEAN,
       default: false
+    },
+    referido: {
+      type: Sequelize.TEXT
+    },
+    referido_por: {
+      type: Sequelize.TEXT
     }
   },
   {

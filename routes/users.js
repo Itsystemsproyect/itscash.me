@@ -1,9 +1,10 @@
 const Router = require("express");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
+const { nanoid } = require('nanoid')
 const config = require("config");
 const auth = require("../middleware/auth");
-const isVerified = require("../middleware/isVerified");
+
 const { body, validationResult } = require("express-validator");
 const Usuario = require("../models/users");
 const send = require('../utils/accountVerification');
@@ -29,7 +30,7 @@ router.post(
     if (!errors.isEmpty()) {
       return res.status(400).json({ errores: errors.array() });
     }
-    let { username, email, password } = req.body;
+    let { username, email, password, referido_por } = req.body;
 
     try {
       const user = await Usuario.findOne({
@@ -42,14 +43,31 @@ router.post(
       }
 
       const salt = await bcrypt.genSalt(10);
-      password = await bcrypt.hash(password, salt);
+      password = await bcrypt.hash(password, salt);    
+      
+      
+      let referido = nanoid();
 
-      const newUser = await Usuario.create({
-        username: username,
-        email: email,
-        password: password,
-      })
+      let newUser;
 
+      if (referido_por !== undefined) {
+        newUser = await Usuario.create({
+          username: username,
+          email: email,
+          password: password,
+          referido: referido,
+          referido_por: referido_por
+        }) 
+      } else {
+        newUser = await Usuario.create({
+          username: username,
+          email: email,
+          password: password,
+          referido: referido
+        })
+      }
+
+      
       // Enviar email de confirmación
       send(newUser);
             

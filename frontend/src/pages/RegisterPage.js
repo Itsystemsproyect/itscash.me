@@ -33,9 +33,10 @@ const RegisterPage = (props) => {
     username: "",
     email: "",
     password: "",
+    referido_por: ""
   });
 
-  const { username, email, password } = user;
+  const { username, email, password, referido_por } = user;
 
   const onChange = (e) => setUser({ ...user, [e.target.name]: e.target.value });
   
@@ -50,6 +51,7 @@ const RegisterPage = (props) => {
         username,
         email,
         password,
+        referido_por
       });
     }
   };
@@ -96,6 +98,19 @@ const RegisterPage = (props) => {
             value={email}
             onChange={onChange}
             required
+          />
+        </div>
+        <div className="form-group emailform">
+          
+          <input
+          placeholder="Código de Referido (Opcional)"
+            className="inputmail inputlogin"
+            id="referido_por"
+            type="text"
+            name="referido_por"
+            value={referido_por}
+            onChange={onChange}
+            
           />
         </div>
         <div className="form-group emailform">
