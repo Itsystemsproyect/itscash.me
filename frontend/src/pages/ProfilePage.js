@@ -34,33 +34,32 @@ const ProfilePage = () => {
 
     return (
         <>
-            {isVerified ?
-                <Layout>
-                    <Navbar />
+        {isVerified ? 
+        <Layout>
+            <Navbar />
+            
+                <Content className="banner1">
+                    <div className='profileContainer' >
+                        <div className='avatarContainer'>
+                        {user && user.imagen ? userHasImage : userHasNoImage}
+                        </div>                        
 
-                    <Content className="banner1">
-                        <div className='profileContainer' >
-                            <div className='avatarContainer'>
-                                {user && user.imagen ? userHasImage : userHasNoImage}
-                            </div>
+                        <Descriptions title='Información del Usuario' className='detallesUsuario' bordered>
+                            <Descriptions.Item label="Nombre">{user && user.username}</Descriptions.Item>
+                            <Descriptions.Item label="Email">{user && user.email}</Descriptions.Item>
+                            <Descriptions.Item label="Referir">{user && user.referido}</Descriptions.Item>
+                            <Descriptions.Item label="Teléfono">{user && user.telefono ? user.telefono : 'Sin información'}</Descriptions.Item>
+                            <Descriptions.Item label="Empresa">{user && user.empresa ? user.empresa : 'Sin información'}</Descriptions.Item>
+                            <Descriptions.Item label="Instagram">{user && user.instagram_link ? user.instagram_link : 'Sin información'}</Descriptions.Item>
+                            <Descriptions.Item label="Facebook">{user && user.facebook_link ? user.facebook_link : 'Sin información'}</Descriptions.Item>
+                            <Descriptions.Item label="Twitter">{user && user.twitter_link ? user.twitter_link : 'Sin información'}</Descriptions.Item>
+                            <Descriptions.Item label="Wallet">{user && user.wallet_address ? user.wallet_address : 'Sin información'}</Descriptions.Item>
+                        </Descriptions>
 
-                            <Descriptions title='Información del Usuario' className='detallesUsuario' bordered>
-                                <Descriptions.Item label="Nombre">{user && user.username}</Descriptions.Item>
-                                <Descriptions.Item label="Email">{user && user.email}</Descriptions.Item>
-                                <Descriptions.Item label="Teléfono">{user && user.telefono ? user.telefono : 'Sin información'}</Descriptions.Item>
-                                <Descriptions.Item label="Empresa">{user && user.empresa ? user.empresa : 'Sin información'}</Descriptions.Item>
-                                <Descriptions.Item label="Instagram">{user && user.instagram_link ? user.instagram_link : 'Sin información'}</Descriptions.Item>
-                                <Descriptions.Item label="Facebook">{user && user.facebook_link ? user.facebook_link : 'Sin información'}</Descriptions.Item>
-                                <Descriptions.Item label="Twitter">{user && user.twitter_link ? user.twitter_link : 'Sin información'}</Descriptions.Item>
-                                <Descriptions.Item label="Wallet">{user && user.wallet_address ? user.wallet_address : 'Sin información'}</Descriptions.Item>
-                            </Descriptions>
-
-                            <div className='buttonContainer'>
-                                <Link to='/edit_profile'><Button className="btnprofile" type='primary' >Editar Perfil</Button></Link>
-                            </div>
-
-
+                        <div className='buttonContainer'>
+                            <Link to='/edit_profile'><Button className="btnprofile" type='primary' >Editar Perfil</Button></Link>
                         </div>
+                    </div>
                     </Content>
 
                 </Layout>
