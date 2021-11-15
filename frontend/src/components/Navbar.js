@@ -11,7 +11,7 @@ const Navbar = () => {
 
   const authContext = useContext(AuthContext);
 
-  const { isAuthenticated, logout } = authContext;
+  const { isAuthenticated, isAdmin, logout } = authContext;
 
   const handleClick = () => setClick(!click);
 
@@ -119,6 +119,19 @@ const Navbar = () => {
                 Wallet
               </NavLink>
             </li>
+            {isAdmin ? 
+              <li className="nav-item">
+                <NavLink
+                  exact
+                  to="/admin"
+                  activeClassName="active"
+                  className="nav-links"
+                  onClick={handleClick}
+                >
+                  Admin
+                </NavLink>
+              </li>
+            : ''}
             <li className="nav-item">
               <Button type="text" onClick={handleLogout} className="nav-links">
                 <span className="navButton">Log-Out</span>

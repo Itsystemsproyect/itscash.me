@@ -8,6 +8,7 @@ import {
   LOGOUT,
   CLEAR_ERRORS,
   USER_LOADED_VERIFIED,
+  USER_LOADED_ADMIN,
 } from "../types";
 
 // eslint-disable-next-line
@@ -19,6 +20,16 @@ export default (state, action) => {
       return {
         ...state,
         isVerified: true,
+        isAdmin: false,
+        isAuthenticated: true,        
+        loading: false,
+        user: action.payload,
+      }
+    case  USER_LOADED_ADMIN:
+      return {
+        ...state,
+        isVerified: true,
+        isAdmin: true,
         isAuthenticated: true,        
         loading: false,
         user: action.payload,
@@ -27,7 +38,8 @@ export default (state, action) => {
       return {
         ...state,
         isVerified: false,
-        isAuthenticated: true,        
+        isAuthenticated: true,
+        isAdmin: false,        
         loading: false,
         user: action.payload,
       };
@@ -50,6 +62,7 @@ export default (state, action) => {
         ...state,
         token: null,
         isAuthenticated: false,
+        isAdmin: false,
         loading: false,
         user: null,
         error: action.payload,

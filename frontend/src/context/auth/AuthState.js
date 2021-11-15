@@ -9,6 +9,7 @@ import {
   REGISTER_FAIL,
   USER_LOADED,
   USER_LOADED_VERIFIED,
+  USER_LOADED_ADMIN,
   AUTH_ERROR,
   LOGIN_SUCCESS,
   LOGIN_FAIL,
@@ -21,6 +22,7 @@ const AuthState = (props) => {
     token: localStorage.getItem("token"),
     isAuthenticated: null,
     isVerified: null,
+    isAdmin:null,
     loading: true,
     user: null,
     error: null,
@@ -37,8 +39,12 @@ const AuthState = (props) => {
     try {
       const res = await axios.get("/api/auth");
       if (res.data['validado']) {
-        console.log('usuario validado');
-        dispatch({type: USER_LOADED_VERIFIED, payload: res.data })
+        if (res.data['rol'] === 'admin') {          
+          dispatch({type: USER_LOADED_ADMIN, payload: res.data})
+        } else {
+          dispatch({type: USER_LOADED_VERIFIED, payload: res.data })
+        }       
+        
       }
       else {
         console.log('Usuario no validado');
@@ -117,6 +123,7 @@ const AuthState = (props) => {
         token: state.token,
         isAuthenticated: state.isAuthenticated,
         isVerified: state.isVerified,
+        isAdmin: state.isAdmin,
         loading: state.loading,
         user: state.user,
         error: state.error,
