@@ -119,6 +119,12 @@ const Navbar = () => {
                 Wallet
               </NavLink>
             </li>
+           
+            <li className="nav-item">
+              <Button type="text" onClick={handleLogout} className="nav-links">
+                <span className="navButton">Log-Out</span>
+              </Button>
+            </li>
             {isAdmin ? 
               <li className="nav-item">
                 <NavLink
@@ -132,11 +138,6 @@ const Navbar = () => {
                 </NavLink>
               </li>
             : ''}
-            <li className="nav-item">
-              <Button type="text" onClick={handleLogout} className="nav-links">
-                <span className="navButton">Log-Out</span>
-              </Button>
-            </li>
           </ul>
         </div>
         <div className="nav-icon" onClick={handleClick}>

@@ -5,6 +5,7 @@ export const REGISTER_FAIL = "REGISTER_FAIL";
 export const USER_LOADED = "USER_LOADED";
 export const USER_LOADED_VERIFIED = "USER_LOADED_VERIFIED";
 export const USER_LOADED_ADMIN = "USER_LOADED_ADMIN";
+export const LIST_USERS = "LIST_USERS";
 export const UPDATE_USER = "UPDATE_USER";
 export const USER_ERROR = "USER_ERROR";
 export const AUTH_ERROR = "AUTH_ERROR";

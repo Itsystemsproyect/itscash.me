@@ -1,7 +1,7 @@
 const Router = require("express");
 const Usuario = require("../models/users");
 const auth = require("../middleware/auth");
-const hasRoles = require("../middleware/hasRoles");
+const isAdmin = require("../middleware/isAdmin");
 
 const router = Router();
 
@@ -9,11 +9,16 @@ const router = Router();
 // @desc        Obtener todos los usuarios
 // @access      ruta privada
 
-router.get("/", auth, hasRoles(["admin"]), async (req, res) => {
-  const usuarios = await Usuario.findAll();
-  if (usuarios) {
-    return res.status(200).json({ data: usuarios });
+router.get("/", [auth, isAdmin] , async (req, res) => {
+  try {
+    const usuarios = await Usuario.findAll();
+    if (usuarios) {      
+      return res.status(200).json({ data: usuarios });
+    }
+  } catch (error) {
+    console.log(error);    
   }
+  
 });
 
 module.exports = router;

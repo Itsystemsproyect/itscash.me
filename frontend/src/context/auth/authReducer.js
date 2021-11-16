@@ -9,6 +9,7 @@ import {
   CLEAR_ERRORS,
   USER_LOADED_VERIFIED,
   USER_LOADED_ADMIN,
+  LIST_USERS,
 } from "../types";
 
 // eslint-disable-next-line
@@ -52,7 +53,11 @@ export default (state, action) => {
         isAuthenticated: true,
         loading: false,
       };
-    
+    case LIST_USERS:
+      return {
+        ...state,
+        users: action.payload
+      };   
     case REGISTER_FAIL:
     case AUTH_ERROR:
     case LOGIN_FAIL:

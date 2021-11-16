@@ -5,11 +5,14 @@ import RegisterPage from "./pages/RegisterPage";
 import AuthState from "./context/auth/AuthState";
 import AlertState from "./context/alert/AlertState";
 import PrivateRoute from "./components/routing/PrivateRoute";
+import AdminRoute from "./components/routing/AdminRoute";
 import ProfilePage from "./pages/ProfilePage"; 
 import EditProfile from "./pages/EditProfile";
+import AdminPage from "./pages/AdminPage";
 import AlertComponent from "./components/AlertComponent";
 import App2 from './wallet/App';
 import "./assets/css/Home.css";
+
 
 
 
@@ -24,6 +27,7 @@ function App() {
           <Route exact path="/register" component={RegisterPage} />
           <PrivateRoute exact path="/profile" component={ProfilePage} />        
           <PrivateRoute exact path='/edit_profile' component={EditProfile} />
+          <AdminRoute exact path='/admin' component={AdminPage}/>
           <PrivateRoute exact path='/wallet' component={App2} />
           
         </Router>

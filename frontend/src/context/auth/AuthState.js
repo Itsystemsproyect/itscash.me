@@ -10,6 +10,7 @@ import {
   USER_LOADED,
   USER_LOADED_VERIFIED,
   USER_LOADED_ADMIN,
+  LIST_USERS,
   AUTH_ERROR,
   LOGIN_SUCCESS,
   LOGIN_FAIL,
@@ -112,6 +113,19 @@ const AuthState = (props) => {
     }
   };
 
+  // List all users
+  const listUsers = async () => {
+    try {
+      const res = await axios.get("/api/admin")
+      dispatch({
+        type: LIST_USERS,
+        payload: res.data
+      })
+    } catch (error) {
+      
+    }
+  }
+
   // Logout
   const logout = () => dispatch({ type: LOGOUT });
 
@@ -130,6 +144,7 @@ const AuthState = (props) => {
         loadUser,
         register,
         login,
+        listUsers,
         logout,
         clearErrors,
       }}

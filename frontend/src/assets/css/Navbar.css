@@ -49,7 +49,7 @@
   color: #fff;
   text-decoration: none;
   padding: 0.5rem 1rem;
-  padding-top: 0px;  
+  padding-top: 0px;
   border-bottom: 3px solid transparent;
 }
 .navButton {
@@ -133,4 +133,8 @@
 
 .linkContainer {
   height: 62.101px;
+}
+
+.ant-btn-text {
+  color: #fff !important;
 }
