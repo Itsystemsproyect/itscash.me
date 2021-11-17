@@ -55,7 +55,7 @@ const Home = () => {
         <div className="transactionstatic">
           <QueryClientProvider client={queryClient}>
             <CryptoTracker cryptoName="solana" />
-            
+
           </QueryClientProvider>
         </div>
         <Content className="content2">
@@ -72,15 +72,19 @@ const Home = () => {
             </div>
             <div className="vision info">
               VISION
-              <p className="parrasc">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-                sollicitudin vitae lorem quis ultricies. Quisque nec imperdiet
-                ex. Ut pulvinar eu mi quis efficitur.
-              </p>
+              <ul className="visionl">
+                <li >Abordar de forma urgente la necesidad de desarrollar un aprendisaje en laboratorios digitales de próxima generación. </li>
+                <br />
+                <li >Posibilitar a creadores de contenido formativo empresarial, a generar material de aprendizaje y consumo.</li>
+                <br />
+                <li >Poner al servicio del Consumidor la Tansformación Digital definitiva, para su interacción y desarrollo de valor.</li>
+                <br />
+                <li >Traer la Aplicación de AI hacia la Usabilidad empresarial.</li>
+              </ul>
               <img className="misimg" src={imgvision} alt="" />
             </div>
             <div className="objetivos info">
-              <img className="misimg" src={imgobjetivos} alt="" />
+              <img className="valor" src={imgobjetivos} alt="" />
               <p className="parrasc"></p>
               VALORES
             </div>

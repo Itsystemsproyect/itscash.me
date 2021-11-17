@@ -210,6 +210,10 @@ img.misimg {
   position: relative;
   width: 100%;
 }
+.visionl{
+  font-size: 21px;
+  text-align: justify;
+}
 
 @media only screen and (max-width: 768px) {
   .ant-menu-dark.ant-menu-horizontal {
