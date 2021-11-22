@@ -69,7 +69,7 @@ const Home = () => {
           </QueryClientProvider>
         </div>
         <Content className="content2">
-          <div className="descripcion">ACERCA DE </div>
+          <div className="descripcion">OBJETIVOS </div>
           <div className="contenedor2">
             {/*} <div className="mision info">
               <img className="misimg" src={imgmision} alt="" />
@@ -81,7 +81,6 @@ const Home = () => {
               MISION
              </div>*/}
             <div className="vision info">
-              VISION
               <ul className="visionl">
                 <li >Abordar de forma urgente la necesidad de desarrollar un aprendisaje en laboratorios digitales de próxima generación. </li>
                 <br />
@@ -91,7 +90,6 @@ const Home = () => {
                 <br />
                 <li >Traer la Aplicación de AI hacia la Usabilidad empresarial.</li>
               </ul>
-              <img className="misimg" src={imgvision} alt="" />
             </div>
             {/*<div className="objetivos info">
               <img className="valor" src={imgobjetivos} alt="" />
