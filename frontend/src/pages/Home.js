@@ -71,7 +71,7 @@ const Home = () => {
         <Content className="content2">
           <div className="descripcion">ACERCA DE </div>
           <div className="contenedor2">
-            <div className="mision info">
+            {/*} <div className="mision info">
               <img className="misimg" src={imgmision} alt="" />
               <p className="parrasc">
                 Recompensar por el esfuerzo que realizan los trabajadores para
@@ -79,7 +79,7 @@ const Home = () => {
                 Trasadas
               </p>
               MISION
-            </div>
+             </div>*/}
             <div className="vision info">
               VISION
               <ul className="visionl">
@@ -93,11 +93,11 @@ const Home = () => {
               </ul>
               <img className="misimg" src={imgvision} alt="" />
             </div>
-            <div className="objetivos info">
+            {/*<div className="objetivos info">
               <img className="valor" src={imgobjetivos} alt="" />
               <p className="parrasc"></p>
               VALORES
-            </div>
+            </div>*/}
           </div>
         </Content>
         <Footer className="footerhome" style={{ textAlign: "center" }}>
