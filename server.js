@@ -3,8 +3,6 @@ const path = require('path');
 
 
 
-
-
 // Inicialización
 const app = express();
 
@@ -17,13 +15,15 @@ app.use(express.json({ extended: false }));
 const userRoutes = require("./routes/users");
 const authRoutes = require("./routes/auth");
 const adminRoutes = require("./routes/admin");
-const verifyRoutes = require('./routes/verify')
+const verifyRoutes = require('./routes/verify');
+const rewardsRoutes = require('./routes/rewards');
 
 // Rutas
 app.use("/api/users", userRoutes);
 app.use("/api/auth", authRoutes);
 app.use("/api/admin", adminRoutes);
-app.use('/api/verify', verifyRoutes)
+app.use('/api/verify', verifyRoutes);
+app.use('/api/rewards', rewardsRoutes);
 
 // Serve static assets in production
 if (process.env.NODE_ENV === "production") {

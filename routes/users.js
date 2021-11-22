@@ -4,6 +4,8 @@ const jwt = require("jsonwebtoken");
 const { nanoid } = require('nanoid')
 const config = require("config");
 const auth = require("../middleware/auth");
+const Sequelize = require("sequelize");
+
 
 const { body, validationResult } = require("express-validator");
 const Usuario = require("../models/users");
@@ -113,7 +115,8 @@ router.put('/:id', [auth], async (req, res) => {
   if (twitter_link) userFields.twitter_link = twitter_link;
   if (wallet_address) userFields.wallet_address = wallet_address;
 
-  
+  userFields.modificado_en = Sequelize.literal('CURRENT_TIMESTAMP');
+   
 
   try {
     let user = await Usuario.findOne({
@@ -131,6 +134,7 @@ router.put('/:id', [auth], async (req, res) => {
     }
 
     user = await Usuario.update(userFields, { where: { id: req.params.id } })
+      
     return res.status(200).json({msg: 'Usuario actualizado exitosamente'})
 
     

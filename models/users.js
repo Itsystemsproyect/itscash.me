@@ -54,12 +54,29 @@ const Usuario = sequelize.define(
       default: false
     },
     referido: {
-      type: Sequelize.TEXT
+      type: Sequelize.TEXT,
+      allowNull: false,
     },
     referido_por: {
       type: Sequelize.TEXT
+    },
+    creado_en: {
+      type: Sequelize.DATE,
+      default: Sequelize.NOW,
+      allowNull: false,
+    },
+    modificado_en: {
+      type: Sequelize.DATE,
+      default: Sequelize.NOW,
+      allowNull: false,
+    },
+    fecha_pago: {
+      type: Sequelize.DATE,
+      defaultValue: sequelize.literal('to_timestamp(0)'),
+      allowNull: false,
     }
   },
+
   {
     timestamps: false,
     tableName: "usuario",

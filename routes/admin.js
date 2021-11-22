@@ -22,3 +22,5 @@ router.get("/", [auth, isAdmin] , async (req, res) => {
 });
 
 module.exports = router;
+
+
