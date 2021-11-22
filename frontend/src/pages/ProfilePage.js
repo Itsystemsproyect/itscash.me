@@ -47,10 +47,10 @@ const ProfilePage = () => {
 
               <Descriptions
                 title="Información del Usuario"
-                className="detallesUsuario"
+                className="detallesUsuario "
                 bordered
               >
-                <Descriptions.Item label="Nombre">
+                <Descriptions.Item clasname="usn" label="Nombre">
                   {user && user.username}
                 </Descriptions.Item>
                 <Descriptions.Item label="Email">

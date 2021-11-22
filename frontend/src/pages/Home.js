@@ -1,7 +1,9 @@
-import React from "react";
 import { Layout, Button } from "antd";
 import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
+import { SiTelegram, SiTwitter } from "react-icons/si";
+
+
 
 import { QueryClient, QueryClientProvider } from "react-query";
 
@@ -45,8 +47,16 @@ const Home = () => {
                   Login
                 </Button>
               </Link>
-              <Button className="btn1" ghost key="boton1">
-                Recompensas
+              <Button className="btn1" ghost key="boton1" href="https://raydium.io/swap/?from=9fzQfEM5aq1GLugzHMM6prq8tsURN2pxQMjARaWGd2py&to=Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB" target="_blank" rel="noopener noreferrer">
+                SWAP
+              </Button>
+            </div>
+            <div className="redessociales">
+              <Button className="telegram" shape="circle" href="https://t.me/joinchat/DHi-ZhevECU1NTUx" target="_blank" rel="noopener noreferrer">
+                < h1 className="tel"><SiTelegram /></h1>
+              </Button>
+              <Button className="twitter" shape="circle">
+                <h1 className="twt"><SiTwitter /></h1>
               </Button>
             </div>
           </div>

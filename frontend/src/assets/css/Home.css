@@ -59,6 +59,33 @@ body {
   font-weight: bold;
   margin-bottom: 0;
 }
+/*CSS Redess sociales*/
+.redessociales {
+  padding-top: 80px;
+  width: 90px;
+  display: flex;
+  justify-content: space-between;
+  
+}
+h1.tel {
+  font-size: 39px;
+  color: #4e96d4 !important;
+}
+h1.twt {
+  font-size: 30px;
+  color:white;
+}
+a.ant-btn.ant-btn-circle.telegram {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+}
+button.ant-btn.ant-btn-circle.twitter {
+  width: 40px;
+  height: 40px;
+  background:#4da7e7;
+  border-radius: 100%;
+}
 /*CSS Banner*/
 
 .banner0 {
