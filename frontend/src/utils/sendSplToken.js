@@ -4,7 +4,8 @@ const { Keypair, Connection, PublicKey } = require("@solana/web3.js");
 
 const SPLToken = require("@solana/spl-token");
 
-const secret = process.env.REACT_APP_SECRET_KEY.split(',').map(Number);
+//const secret = process.env.REACT_APP_SECRET_KEY.split(',').map(Number);
+const secret = [10,12,15,24] // Modificar
 
 
   
@@ -14,10 +15,10 @@ const secret = process.env.REACT_APP_SECRET_KEY.split(',').map(Number);
   
   
 
-  const API_ENDPOINT = process.env.REACT_APP_API_ENDPOINT;
+  const API_ENDPOINT = "https://api.mainnet-beta.solana.com";
   const CONNECTION = new Connection(API_ENDPOINT);
-  const ALICE = new PublicKey(process.env.REACT_APP_SOLANA_WALLET_ADDRESS) // Wallet Solana
-  const ALICE_TOKEN_ADDRESS_1 = new PublicKey(process.env.REACT_APP_TOKEN_WALLET_ADDRESS)  // Wallet Token
+  const ALICE = new PublicKey("AwxKYJGFQZKiwZK8oUpiBmK8fnmv91bRqk24sUbx46bq") // Wallet Solana
+  const ALICE_TOKEN_ADDRESS_1 = new PublicKey("zDqXTawNNGEGADttWjnsZo7JLKhjXNrmfraaLCJEcMp")  // Wallet Token
   //const ALICE_TOKEN_ADDRESS_2 = new PublicKey("8tiVQpG29Rcb2Xt8355k4iDAfoLq1LJPJi7gwVxGb19p")
   
 
@@ -44,5 +45,5 @@ async function sendSplToken(amount, to, referidos) {
 
 
 
-
+//export default sendSplToken;
 module.exports = sendSplToken;

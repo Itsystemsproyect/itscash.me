@@ -10,7 +10,6 @@ import ProfilePage from "./pages/ProfilePage";
 import ReferidosPage from "./pages/ReferidosPage"; 
 import EditProfile from "./pages/EditProfile";
 import AdminPage from "./pages/AdminPage";
-import Test from './components/Test';
 import AlertComponent from "./components/AlertComponent";
 import App2 from './wallet/App';
 import "./assets/css/Home.css";
@@ -24,8 +23,7 @@ function App() {
       <AlertState>
       <AlertComponent />
         <Router>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/test" component={Test}/>
+          <Route exact path="/" component={Home} />          
           <Route exact path="/login" component={LoginPage} />
           <Route exact path="/register" component={RegisterPage} />
           <PrivateRoute exact path="/profile" component={ProfilePage} />        
