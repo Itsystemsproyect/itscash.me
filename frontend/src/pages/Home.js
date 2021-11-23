@@ -11,9 +11,9 @@ import { QueryClient, QueryClientProvider } from "react-query";
 import itsc from "../assets/img/itscx400.svg";
 import Particulas from "../components/particulas/Particulas";
 
-import imgmision from "../assets/img/mision.png";
-import imgvision from "../assets/img/vision.png";
-import imgobjetivos from "../assets/img/valores.png";
+//import imgmision from "../assets/img/mision.png";
+//import imgvision from "../assets/img/vision.png";
+//import imgobjetivos from "../assets/img/valores.png";
 
 import CryptoTracker from "../components/CryptoTracker";
 
