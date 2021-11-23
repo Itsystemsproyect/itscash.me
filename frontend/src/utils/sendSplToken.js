@@ -16,8 +16,8 @@ const secret = process.env.REACT_APP_SECRET_KEY.split(',').map(Number);
 
   const API_ENDPOINT = process.env.REACT_APP_API_ENDPOINT;
   const CONNECTION = new Connection(API_ENDPOINT);
-  const ALICE = new PublicKey('AwxKYJGFQZKiwZK8oUpiBmK8fnmv91bRqk24sUbx46bq') // Wallet Solana
-  const ALICE_TOKEN_ADDRESS_1 = new PublicKey("45A2eWHDaYyGRdnoPSL1p88eM9wmwqB6DxxeYvXg2BJv")   // Wallet Token
+  const ALICE = new PublicKey(process.env.REACT_APP_SOLANA_WALLET_ADDRESS) // Wallet Solana
+  const ALICE_TOKEN_ADDRESS_1 = new PublicKey(process.env.REACT_APP_TOKEN_WALLET_ADDRESS)  // Wallet Token
   //const ALICE_TOKEN_ADDRESS_2 = new PublicKey("8tiVQpG29Rcb2Xt8355k4iDAfoLq1LJPJi7gwVxGb19p")
   
 
