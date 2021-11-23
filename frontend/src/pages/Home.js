@@ -55,7 +55,7 @@ const Home = () => {
               <Button className="telegram" shape="circle" href="https://t.me/joinchat/DHi-ZhevECU1NTUx" target="_blank" rel="noopener noreferrer">
                 < h1 className="tel"><SiTelegram /></h1>
               </Button>
-              <Button className="twitter" shape="circle">
+              <Button className="twitter" shape="circle" href="https://twitter.com/itscash_me" target="_blank" rel="noopener noreferrer">
                 <h1 className="twt"><SiTwitter /></h1>
               </Button>
             </div>
