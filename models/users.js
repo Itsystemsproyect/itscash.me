@@ -63,17 +63,17 @@ const Usuario = sequelize.define(
     creado_en: {
       type: Sequelize.DATE,
       default: Sequelize.NOW,
-      allowNull: false,
+      
     },
     modificado_en: {
       type: Sequelize.DATE,
       default: Sequelize.NOW,
-      allowNull: false,
+      
     },
     fecha_pago: {
       type: Sequelize.DATE,
       defaultValue: sequelize.literal('to_timestamp(0)'),
-      allowNull: false,
+      
     }
   },
 

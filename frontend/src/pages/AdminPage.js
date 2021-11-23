@@ -3,7 +3,8 @@ import axios from "axios";
 import AuthContext from "../context/auth/authContext";
 import Navbar from "../components/Navbar";
 import Loader from "react-loader-spinner";
-import { Table, Tag, Space } from 'antd';
+import { Table, Tag, Button } from 'antd';
+import {Link} from 'react-router-dom';
 import '../assets/css/AdminPanel.css';
 
 const AdminPage = () => {
@@ -54,10 +55,12 @@ const AdminPage = () => {
   const data = users.data;
 
   return (
-    <div>
-      <Navbar />
+    <div>      
+      <Navbar />      
+            
       {hasLoaded ? (
         <div className="tableContainer">
+          <Link to="/referidos"><Button type="primary" className="referButton">Referidos</Button></Link>
           <Table columns={columns} dataSource={data} />
         </div>
       ) : (

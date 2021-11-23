@@ -6,7 +6,8 @@ import AuthState from "./context/auth/AuthState";
 import AlertState from "./context/alert/AlertState";
 import PrivateRoute from "./components/routing/PrivateRoute";
 import AdminRoute from "./components/routing/AdminRoute";
-import ProfilePage from "./pages/ProfilePage"; 
+import ProfilePage from "./pages/ProfilePage";
+import ReferidosPage from "./pages/ReferidosPage"; 
 import EditProfile from "./pages/EditProfile";
 import AdminPage from "./pages/AdminPage";
 import Test from './components/Test';
@@ -30,6 +31,7 @@ function App() {
           <PrivateRoute exact path="/profile" component={ProfilePage} />        
           <PrivateRoute exact path='/edit_profile' component={EditProfile} />
           <AdminRoute exact path='/admin' component={AdminPage}/>
+          <AdminRoute exact path='/referidos' component={ReferidosPage}/>
           <PrivateRoute exact path='/wallet' component={App2} />
           
         </Router>

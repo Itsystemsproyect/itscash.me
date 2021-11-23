@@ -1,0 +1,9 @@
+
+.inputContainer {
+    width: 50% !important;
+    margin: auto;
+}
+
+.ant-form-item-label > label {
+    color: whitesmoke !important;
+}
