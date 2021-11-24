@@ -17,19 +17,23 @@ const ReferidosPage = () => {
 
     const alertContext = useContext(AlertContext);
     const { setAlert } = alertContext;
-    useEffect(async () => {
-        await axios.get(`api/rewards`)
-        .then((res) => {
+    useEffect( () => {
+        const fetchData = async () => {
+            await axios.get(`api/rewards`)
+            .then((res) => {
+                
+                setReferidos(() => res.data['data']);
+                setHasLoaded(true);
+                
+            })
             
-            setReferidos(() => res.data['data']);
-            setHasLoaded(true);
-            
-        })
-        
-        .catch((err) => { 
-            console.error(err)      
-            
-        })       
+            .catch((err) => { 
+                console.error(err)      
+                
+            })
+        }
+
+        fetchData();             
         
         
     }, [hasChanged])

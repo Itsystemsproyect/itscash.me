@@ -1,11 +1,11 @@
-const { Transaction } = require("@solana/web3.js");
-const { Keypair, Connection, PublicKey } = require("@solana/web3.js");
+import { Transaction } from "@solana/web3.js";
+import { Keypair, Connection, PublicKey } from "@solana/web3.js";
+import * as SPLToken from "@solana/spl-token";
 
 
-const SPLToken = require("@solana/spl-token");
 
-//const secret = process.env.REACT_APP_SECRET_KEY.split(',').map(Number);
-const secret = [10,12,15,24] // Modificar
+const secret = process.env.REACT_APP_SECRET_KEY.split(',').map(Number);
+
 
 
   
@@ -45,5 +45,5 @@ async function sendSplToken(amount, to, referidos) {
 
 
 
-//export default sendSplToken;
-module.exports = sendSplToken;
+export default sendSplToken;
+//module.exports = sendSplToken;

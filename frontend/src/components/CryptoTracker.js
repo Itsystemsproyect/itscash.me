@@ -49,18 +49,20 @@ const formatPlusMinus = (priceChange) => {
  * https://letsbuildui.dev/articles/bitcoin-price-tracking-with-react-query
  */
 const CryptoTracker = ({ cryptoName }) => {
-  const [isExpanded, setIsExpanded] = useState(false);
+  //const [isExpanded, setIsExpanded] = useState(false);
 
   const { data, isLoading } = useGetCardData(cryptoName, {
     refetchInterval: 60000,
     staleTime: 60000,
   });
 
+  /*
   const onCardClick = () => {
     if (!isExpanded) {
       setIsExpanded(true);
     }
   };
+  */
 
   if (isLoading) return null;
 

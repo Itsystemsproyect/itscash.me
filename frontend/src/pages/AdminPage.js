@@ -1,18 +1,18 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
-import AuthContext from "../context/auth/authContext";
+//import AuthContext from "../context/auth/authContext";
 import Navbar from "../components/Navbar";
 import Loader from "react-loader-spinner";
-import { Table, Tag, Button } from 'antd';
+import { Table, Button } from 'antd';
 import {Link} from 'react-router-dom';
 import '../assets/css/AdminPanel.css';
 
 const AdminPage = () => {
-  const authContext = useContext(AuthContext);
-  const { isVerified, isAdmin, listUsers } = authContext;
+  //const authContext = useContext(AuthContext);
+  //const { isVerified, isAdmin, listUsers } = authContext;
   const [users, setUsers] = useState([]);
   const [hasLoaded, setHasLoaded] = useState();
-
+/*
   useEffect(async () => {
     await axios
       .get("/api/admin")
@@ -23,6 +23,22 @@ const AdminPage = () => {
       .catch((err) => {
         console.log(err);
       });
+  }, []);
+  */
+
+  useEffect( () => {
+    const fetchData = async () => {
+      await axios
+      .get("/api/admin")
+      .then((res) => {
+        setUsers(() => res.data);
+        setHasLoaded(true);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+    }
+    fetchData();    
   }, []);
 
   
