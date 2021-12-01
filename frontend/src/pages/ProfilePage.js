@@ -12,11 +12,13 @@ const { Content } = Layout;
 const ProfilePage = () => {
   const authContext = useContext(AuthContext);
   const { user, loadUser, isVerified, loading } = authContext;
-  //const [loading, setLoading] = useState(true);
+  
 
-  useEffect(() => {
-    loadUser();
-    //setLoading(!loading);
+  
+
+  useEffect(() => {    
+     loadUser()        
+    
     // eslint-disable-next-line
   }, []);
 
@@ -133,7 +135,7 @@ const notLoadedPage = <>
         />
 </>
 
-  return <>{loading ? notLoadedPage : loadedPage}</>;
+  return <>{user && loadedPage || notLoadedPage}</>;
 };
 
 export default ProfilePage;
