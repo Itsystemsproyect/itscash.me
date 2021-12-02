@@ -87,20 +87,13 @@ export default function NavigationFrame({ children }) {
               paddingRight: "24px",
               fontSize: "14px",
             }}
-          >
-            {" "}
-            {/* 
-            <Typography>
-              Beware of sites attempting to impersonate sollet.io or other DeFi
-              services.
-            </Typography>
-            */}
+          >            
           </div>
         )}
         <Toolbar style={{background:"#061529"}}>
           <Typography style={{color: "white",
                     }} variant="h6"  className={classes.title} component="h1">
-            {isExtensionWidth ? "Sollet" : "ITSC Wallet"}
+            <Link to='/profile' style={{color: "white"}}>{isExtensionWidth ? "Sollet" : "ITSC Wallet"}</Link>
           </Typography>
           <NavigationButtons />
         </Toolbar>
