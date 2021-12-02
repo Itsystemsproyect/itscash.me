@@ -11,7 +11,9 @@ const router = Router();
 
 router.get("/", [auth, isAdmin] , async (req, res) => {
   try {
-    const usuarios = await Usuario.findAll();
+    const usuarios = await Usuario.findAll({
+      order: [['creado_en', 'DESC']],
+    });
     if (usuarios) {      
       return res.status(200).json({ data: usuarios });
     }

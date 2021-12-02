@@ -84,7 +84,7 @@ const ProfilePage = () => {
                 ? user.twitter_link
                 : "Sin información"}
             </Descriptions.Item>
-            <Descriptions.Item label="Wallet">
+            <Descriptions.Item label="ITSCASH Address">
               {user && user.wallet_address
                 ? user.wallet_address
                 : "Sin información"}
