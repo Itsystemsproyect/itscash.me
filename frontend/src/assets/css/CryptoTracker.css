@@ -235,6 +235,13 @@ button {
   }
 }
 
+@media screen and (max-width: 690px) {
+  .cardContainer {
+    width: 73%;
+    margin: auto;
+  }
+}
+
 @media screen and (max-width: 668px) {
   .cardContainer {
     width: 75%;
@@ -245,6 +252,13 @@ button {
 @media screen and (max-width: 629px) {
   .cardContainer {
     width: 80%;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .cardContainer {
+    width: 83%;
     margin: auto;
   }
 }
@@ -262,6 +276,17 @@ button {
   }
 }
 
+@media screen and (max-width: 490px) {
+  .cardContainer {
+    width: 88%;
+    margin: auto;
+  }
+
+  .crypto-price {
+    font-size: 15px;    
+  }
+}
+
 @media screen and (max-width: 483px) {
   .cardContainer {
     width: 90%;
@@ -273,18 +298,25 @@ button {
   }
 }
 
+@media screen and (max-width: 483px) {
+  .cardContainer {
+    width: 92%;
+    margin: auto;
+  }
+
+
+}
+
 @media screen and (max-width: 429px) {
   .cardContainer {
     width: 95%;
     margin: auto;
   }
 
-  .crypto-price {
-    font-size: 14px;
-  }
+
 }
 
-@media screen and (max-width: 405px) {
+@media screen and (max-width: 410px) {
   .cardContainer {
     width: 100%;
   }
@@ -294,7 +326,7 @@ button {
   }
 }
 
-@media screen and (max-width: 325px) {
+@media screen and (max-width: 330px) {
   .top-data {
     padding: 40px 12px 10px;
   }
