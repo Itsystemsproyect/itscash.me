@@ -1,8 +1,8 @@
 {
     "HOST": "localhost",
-    "USER": "pgadminitsc",
-    "PASSWORD": "$Rz8sgHx4yWWgTr@",
-    "DB":"dbitscash",
+    "USER": "postgres",
+    "PASSWORD": "^It791@ikSu",
+    "DB":"itsc",
     "dialect": "postgres",
     "jwtSecret": "veryVERYverylongstring,xmckzdsnfsaodpoaspcxm<ksdmamfksofmkx123009$%&%&&/&",
     "baseUrl": "https://www.itscash.me/api/"    
